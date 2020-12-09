@@ -1,0 +1,869 @@
+body{
+	margin-left: 0px;
+}
+
+main{
+	margin: 0 10%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.nav-desktop{
+	display: none;
+}
+
+.rs-fixed{
+	display: none;
+}
+
+
+.burger{
+	z-index: 4;
+	position: absolute;
+	margin: 0 0 0 30px;
+	padding-top: 10px;
+}
+
+.menumobile {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+}
+
+.menumobile:target {
+  display: unset;
+}
+
+.menu-ouvert, .menu-ouvert-rs{
+	position: relative;
+	color: #000;
+	margin-right: 40px;
+}
+
+.menu-ouvert-rs{
+	text-align: center;
+	margin-top: 10%;
+}
+
+.menu-ouvert li{
+	list-style: none;
+	color: #000;
+	text-align: center;
+}
+
+.menu-ouvert li a{
+	text-decoration: none;
+	font-family: Lato;
+	font-size: 2rem;
+	color: #000;
+}
+
+.close {
+  display: inline-block;
+  position: relative;
+  overflow: visible;
+  text-align: left;
+  z-index: 4;
+  margin-bottom: 20%;
+  margin-top: 10%;
+}
+
+.overlay {
+  content: "";
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #FFF;
+  opacity: 1;
+  z-index: -1;
+}
+
+.menu-ouvert-rs li{
+	list-style: none;
+	display: inline;
+	color: #000;
+	margin: 0 5px;
+}
+
+.menu-ouvert-rs li a{
+	text-decoration: none;
+	color: #000;
+	font-size: 1.5rem;
+}
+
+
+
+
+
+
+
+
+.text-intro{
+	font-size: 1.50rem;
+	font-family: 'Lato', sans-serif;
+	font-weight: bold;
+	margin-top: 95px;
+}
+
+.text-intro2{
+	font-family: 'Lato', sans-serif;
+	font-weight: normal;
+	font-size: 1rem;
+}
+
+.container-logo{
+	display: flex;
+	margin: 50px 0;
+}
+
+.logo-db-site{
+	margin: 5px auto;
+	height: 40px;
+}
+
+.tache1-contenant{
+	height: calc(100vh - 50px);
+	position: absolute;
+	margin-left: -10%;
+	width: 100vw;
+	overflow: hidden;
+}
+
+.img-drum-conteneur{
+	position: absolute;
+	overflow: hidden;
+	bottom: 0;
+	width: 100vw;
+	height: calc(100vh - 50px);
+	margin-left: -10%;
+}
+
+.img-drum{
+	width: 70vh;
+	position: absolute;
+	bottom: 0px;
+	right: -30vw;
+}
+
+.img-tache1{
+	width: 300vw;
+	position: absolute;
+	bottom: 0px;
+	left: -75vw;
+	z-index: -1;
+}
+
+.img-tache2{
+	width: 300vw;
+	margin-left: -75vw;
+}
+
+.tableau2{
+	margin-top: calc(100vh - 254px);
+	overflow: hidden;
+}
+
+.tache2-contenant{
+	position: absolute;
+	top: calc(100vh - 1px);
+	width: 100vw;
+	overflow: hidden;
+	margin-left: -10%;
+	z-index: -1;
+}
+
+#competences, #travaux, #actus, #contact{
+	font-size: 2rem;
+	font-family: Lato, sans-serif;
+	padding-top: 20px;
+	text-align: center;
+}
+
+
+.tache3-conteneur{
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	margin-left: -10%;
+	z-index: -1;
+	top: 100vh;
+}
+
+.tache3{
+	width: 60vw;
+	position: absolute;
+	bottom: 0;
+}
+
+
+.tache4-conteneur{
+	position: absolute;
+	top: 200vh;
+	width: 60vw;
+	margin-left: -10%;
+	z-index: -1;
+	margin-top: -2px;
+}
+
+.competence-card{
+	font-family: 'Lato', sans-serif;
+	margin-top: 70px;
+	display: flex;
+	flex-direction: column;
+}
+
+.competence-card > h3{
+	font-size: 1.25rem;
+	margin: 8px;
+}
+
+.competence-card > p{
+	font-size: 1rem;
+}
+
+.logo-competence{
+	height: 30px;
+	margin: 0 2px;
+}
+
+.icon-competence{
+	height: 50px;
+}
+
+.logo-software{
+	margin: auto;
+	margin-top: 10px;
+}
+
+/** MOSAIQUE TRAVAUX **/
+
+.card-travaux, .card-actus{
+	border-radius: 25px;
+	position: relative;
+	box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, .1);
+	margin-bottom: 20px;
+}
+
+.card-travaux > span, .card-actus > span{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	border-radius: 0 25px 0 0;
+	font-family: 'Lato', sans-serif;
+	font-weight: bold;
+	padding: 7px 15px 7px 10px;
+	background-color: #F2D029;
+}
+
+.card-travaux > div > a, .img-card-actus > div > a{
+	cursor: default;
+}
+
+.img-card-travaux, .img-card-actus{
+	width: 100%;
+	border-radius: 25px 25px 25px 25px;
+	display: block;
+}
+
+.suite-travaux, .suite-actus{
+	display: flex;
+	justify-content: center;
+}
+
+.suite-travaux > a{
+	text-decoration: none;
+	color: #000;
+}
+
+.suite-travaux > a > p, .suite-actus > p{
+	font-family: 'Lato', sans-serif;
+	font-weight: bold;
+	font-size: 1rem;
+	text-transform: uppercase;
+	text-align: center;
+	border: 3px solid #F2D029;
+	display: inline-block;
+	padding: 10px 15px;
+	border-radius: 18px;
+}
+
+.titre-article{
+	position: absolute;
+	bottom: 0px;
+	background-color: #FFF;
+	font-family: 'Lato', sans-serif;
+	font-weight: normal;
+	font-size: 1rem;
+	margin: 10px 15px;
+	padding: 5px;
+	text-align: center;
+	border-radius: 25px;
+	width: calc(100% - 40px);
+}
+
+.img-jonglage{
+	display: none;
+}
+
+.email1, .email2{
+	font-family: 'Lato', sans-serif;
+	font-weight: normal;
+	font-size: 1rem;
+	text-align: center;
+	margin: 0 0 6px 0;
+}
+
+.email1{
+	color: #565656;
+}
+
+.email2{
+		text-decoration: none;
+		color: #000;
+		display: block;
+}
+
+.cv-book-containeur{
+	display: flex;
+	flex-direction: column;
+	margin-top: 30px;
+	align-items: center;
+	margin-bottom: 50px;
+}
+
+.cv-book{
+	width: 160px;
+	height: 50px;
+	background-color: #FFF;
+	border-radius: 10px;
+	box-shadow: 0 0 16px rgba(0, 0, 0, .3);
+	margin-bottom: 20px;
+	display: flex;
+	text-decoration: none;
+	color: #000;
+}
+
+.cv-book > p{
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	font-size: 1rem;
+	margin: 15px 0;
+}
+
+.cv-book > img{
+	height: 20px;
+	margin: 15px 20px;
+}
+
+.form-input > input, .form-input > textarea{
+	border: 0px;
+	margin-bottom: 14px;
+	font-family: 'Lato', sans-serif;
+	font-weight: normal;
+	font-size: 1rem;
+	width: 100%;
+	background-color: transparent;
+}
+
+.form-input > input:placeholder{
+	color: #000;
+}
+
+.form-input:after{
+	content: "";
+	display: block;
+	height: 1px;
+	background-color: #979797;
+	margin-bottom: 20px;
+}
+
+.form-input:focus-within:after{
+	background-color: #F2D029;
+}
+
+.form-input > input:focus, .form-input > textarea:focus{
+	outline: none;
+}
+
+.button-containeur{
+	display: flex;
+	justify-content: flex-end
+}
+
+.bouton-envoyer{
+	font-family: 'Lato', sans-serif;
+	font-weight: bold;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	background-color: #FFF;
+	border: 0px;
+	box-shadow: 0 0 0;
+	cursor: pointer;
+}
+
+footer{
+	position: relative;
+}
+
+.text-footer{
+	background-color: #F2D029;
+	font-family: 'Lato', sans-serif;
+	font-weight: normal;
+	font-size: .75rem;
+	padding: 10px;
+	margin: 0 -8px -8px 0px;
+}
+
+.text-footer > p{
+	margin: 0;
+	text-align: center;
+}
+
+.img-tache6{
+	position: absolute;
+	bottom: 0;
+	width: 80vw;
+	z-index: -1;
+}
+
+.img-bike{
+	width: 40vw;
+	margin-left: 10px;
+	display: block;
+}
+
+.tache5-box{
+	position: relative;
+}
+
+.img-tache5{
+	position: absolute;
+	right: calc(-10vw - 7px);
+	top: -100px;
+	width: 80vw;
+	z-index: -1;
+	display: block;
+}
+
+/* RESPONSIVE MOBILE PAYSAGE */
+
+@media screen and (min-width: 377px){
+	.img-drum-conteneur{
+		position: absolute;
+		overflow: hidden;
+		bottom: 0;
+		width: 100vw;
+		height: calc(100vh - 50px);
+		margin-left: -10%;
+	}
+
+	.img-drum{
+		width: 80vh;
+		position: absolute;
+		bottom: 0px;
+		right: 0;
+	}
+
+	.text-intro{
+		font-size: 1.50rem;
+	}
+
+	.logo-db-site{
+		margin: auto;
+		height: 50px;
+	}
+
+	.img-tache1{
+		width: 100vw;
+		position: absolute;
+		bottom: 0px;
+		left: 0vw;
+		z-index: -1;
+	}
+
+	.img-tache2{
+		width: 100vw;
+		margin-left: 0vw;
+	}
+
+	.tache3{
+		width: 30vw;
+	}
+
+	.tache4-conteneur{
+		width: 30vw;
+	}
+
+	.close{
+		margin-bottom: 0;
+		margin-top: 50px;
+	}
+
+	.menu-ouvert-rs{
+		margin-top: 5%;
+	}
+
+	.img-jonglage{
+	}
+
+
+	#competences, #travaux, #actus, #contact{
+		padding-top: 10px;
+	}
+
+
+}
+
+/* RESPONSIVE TABLETTE PORTRAIT */
+
+@media screen and (min-width: 668px){
+	.img-drum-conteneur{
+		position: absolute;
+		overflow: hidden;
+		bottom: 0;
+		width: 100vw;
+		height: calc(100vh - 50px);
+		margin-left: -10%;
+	}
+
+	.img-drum{
+		width: 80vh;
+		position: absolute;
+		bottom: 0px;
+		right: -10vw;
+	}
+
+	.img-tache1{
+		width: 200vw;
+		position: absolute;
+		bottom: 0px;
+		left: -50vw;
+		z-index: -1;
+	}
+
+	.img-tache2{
+		width: 200vw;
+		margin-left: -50vw;
+	}
+
+	.text-intro{
+		font-size: 2.25rem;
+	}
+
+	.text-intro2{
+		font-size: 1.25rem;
+	}
+
+	#competences, #travaux{
+		font-size: 2.25rem;
+	}
+
+	.tache3{
+		width: 50vw;
+	}
+
+	.tache4-conteneur{
+		width: 50vw;
+	}
+
+	.close{
+		margin-bottom: 20%;
+	}
+
+	.menu-ouvert-rs{
+		margin-top: 10%;
+	}
+
+	#competences, #travaux, #actus, #contact{
+		padding-top: 20px;
+	}
+
+	.competence-conteneur{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.competence-card{
+		width: 45%;
+	}
+
+	.travaux-cards-containeur, .actus-cards-containeur{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.card-travaux, .card-actus{
+		width: 48%;
+	}
+
+	.suite-travaux, .suite-actus{
+		width: 100%;
+	}
+
+	.competence-card:last-of-type{
+		margin: auto;
+	}
+
+	.img-tache5{
+		width: 45vw;
+	}
+}
+
+/* RESPONSIVE TABLETTE PAYSAGE */
+
+@media screen and (min-width: 900px){
+	.img-drum-conteneur{
+		position: absolute;
+		overflow: hidden;
+		bottom: 0;
+		width: 100vw;
+		height: calc(100vh - 50px);
+		margin-left: -10%;
+	}
+
+	.img-drum{
+		width: 80vh;
+		position: absolute;
+		bottom: 0px;
+		right: 10%;
+	}
+
+	.img-tache1{
+		width: 130vw;
+		position: absolute;
+		bottom: 0px;
+		left: -15vw;
+		z-index: -1;
+	}
+
+	.img-tache2{
+		width: 130vw;
+		margin-left: -15vw;
+	}
+
+	.nav-mobile{
+		display: none;
+	}
+
+	.nav-desktop{
+		position: fixed;
+		display: inline;
+		top: 50%;
+		transform: translate(-50%) rotate(-90deg);
+		left: 5%;
+		z-index: 1;
+	}
+
+/*
+	.nav-desktop li a:hover{
+		cursor: url("../imgs/cursor-nav.svg"), auto;
+	}
+	*/
+
+	.nav-desktop li{
+		list-style: none;
+		display: inline;
+	}
+
+	.nav-desktop li a{
+		text-decoration: none;
+		font-family: Lato, sans-serif;
+		font-size: 1.25rem;
+		color: black;
+		margin-right: 20px;
+	}
+
+	.rs-fixed{
+		display: unset;
+		position: fixed;
+		right: 5%;
+		top: 50%;
+	}
+
+	.rs-fixed li{
+		margin-bottom: 10px;
+		list-style: none;
+	}
+
+	.rs-fixed li a{
+		text-decoration: none;
+		font-size: 1.6875rem;
+		color: black;
+	}
+
+	.tache3{
+		width: 40vw;
+	}
+
+	.tache4-conteneur{
+		width: 40vw;
+	}
+
+	#competences, #travaux, #actus, #contact{
+		padding-top: 20px;
+	}
+
+	.text-footer > p{
+		text-align: right;
+		padding-right: 30px;
+	}
+
+	.img-bike{
+		margin-left: 10%;
+		margin-bottom: -35px;
+	}
+
+}
+
+/* RESPONSIVE DESKTOP */
+
+@media screen and (min-width: 1224px) {
+	.img-drum{
+		right: 15%;
+		bottom: 0;
+		width: 100vh;
+		position: absolute;
+	}
+
+	.img-drum{
+		width: 80vh;
+		position: absolute;
+		bottom: 0px;
+		right: 15%;
+	}
+
+	.img-tache1{
+		width: 100vw;
+		position: absolute;
+		bottom: 0px;
+		left: 0vw;
+		z-index: -1;
+	}
+
+	.img-tache2{
+		width: 100vw;
+		margin-left: 0vw;
+	}
+
+	.nav-desktop li a{
+		font-size: 1.75rem;
+		margin-right: 30px;
+	}
+
+	.rs-fixed li a{
+		font-size: 2rem;
+	}
+
+	.text-intro{
+		font-size: 2.625rem;
+	}
+
+	.text-intro2{
+		font-size: 1.5rem;
+	}
+
+	.tache3{
+		width: 30vw;
+	}
+
+	.tache4-conteneur{
+		width: 30vw;
+	}
+
+	#competences, #travaux, #actus, #contact{
+		padding-top: 40px;
+		font-size: 2.5rem;
+		text-align: left;
+	}
+
+	.competence-conteneur{
+		max-width: 1000px;
+		margin: auto;
+		margin-bottom: 70px;
+	}
+
+	.competence-card{
+		width: 30%;
+	}
+
+	.competence-card:last-of-type{
+		margin: 70px 0 0 0;
+	}
+
+	.card-travaux{
+		width: 32%;
+	}
+
+	.card-actus{
+		width: 48%;
+	}
+
+	.actus-cards-containeur{
+		width: 66%;
+	}
+
+	.img-jonglage-containeur{
+		position: relative;
+	}
+
+	.img-jonglage{
+		display: block;
+		width: 20vw;
+		transform: scaleX(-1);
+		position: absolute;
+		right: 0;
+		bottom: -50px;
+	}
+
+	.contact-flexbox{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.contact-form{
+		width: 60%;
+	}
+
+	.contact-box1{
+		width: 40%;
+		margin-left: 20px;
+	}
+
+	.email1, .email2{
+		text-align: left;
+	}
+
+	.cv-book-containeur{
+		align-items: flex-start;
+	}
+
+	.img-tache5{
+		width: 38vw;
+		top: -200px;
+	}
+
+	.travaux-cards-containeur, .actus-cards-containeur{
+		margin-top: 80px;
+	}
+
+	.img-bike{
+		width: 30vw;
+	}
+
+	.img-tache6{
+		width: 60vw;
+	}
+
+}
