@@ -4,12 +4,13 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Portfolio | Doriane Brousseau</title>
+	<link rel="stylesheet" href="assets/css/reset.css" />
 	<link rel="stylesheet" href="assets/css/style.css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script type="text/javascript" src="assets/js/script.js"></script>
+	<script src="assets/js/script.js"></script>
   <script src="https://kit.fontawesome.com/c33d77e322.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&display=swap" rel="stylesheet">
-  <link rel="icon" href=""/>
+  <link rel="icon" href="assets/imgs/favicon.ico"/>
 </head>
 <body>
 	<nav>
@@ -19,21 +20,20 @@
 			<li><a href="#actus">Actus</a></li>
 			<li><a href="#contact">Contact</a></li>
 		</ul>
-		
 	</nav>
 
 	<nav class="nav-mobile">
-		<a class="burger" href="#menu"><img src="assets/imgs/menu-burger.svg"></a>
+		<a class="burger" href="#menu"><img src="assets/imgs/menu-burger.svg" alt="Menu"></a>
 
 		<div class="menumobile" id="menu">
+			<a href="#" class="close"><img src="assets/imgs/croix.svg" alt="croix"></a>
 			<ul class="menu-ouvert">
-				<a href="#" class="close"><img src="assets/imgs/croix.svg"></a>
 				<li><a href="#competences">Compétences</a></li>
 				<li><a href="#travaux">Travaux</a></li>
 				<li><a href="#actus">Actus</a></li>
 				<li><a href="#contact">Contact</a></li>
-				<div class="overlay"></div>
 		  	</ul>
+				<div class="overlay"></div>
 
 		  	<ul class="menu-ouvert-rs">
 				<li><a href="https://www.linkedin.com/in/doriane-brousseau/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
@@ -45,44 +45,46 @@
 
 
 
-	<div class="rs-fixed">
+	<ul class="rs-fixed">
 		<li><a href="https://www.linkedin.com/in/doriane-brousseau/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
 		<li><a href="https://www.behance.net/brousseaudoriane" target="_blank"><i class="fab fa-behance"></i></a></li>
 		<li><a href="https://dribbble.com/brousseaudoriane" target="_blank"><i class="fab fa-dribbble"></i></a></li>
-	</div>
+	</ul>
 
 <main>
-	<div class="tache1-contenant">
-		<img class="img-tache1" src="assets/imgs/tache1.svg">
-	</div>
+	<section>
+		<div class="tache1-contenant">
+			<img class="img-tache1" src="assets/imgs/tache1.svg" alt="Forme jaune">
+		</div>
 
-	<div class="container-logo">
-		<img class="logo-db-site" src="assets/imgs/logo-db-site.svg">
-	</div>
-	<div>
-		<h1 class="text-intro">Hello ! Je suis Doriane,<br> étudiante en multimédia</h1>
-		<p class="text-intro2">Découvrez mes projets</p>
-	</div>
+		<div class="container-logo">
+			<img class="logo-db-site" src="assets/imgs/logo-db-site.svg" alt="logo">
+		</div>
+		<div>
+			<h1 class="text-intro">Hello ! Je suis Doriane,<br> étudiante en multimédia</h1>
+			<p class="text-intro2">Découvrez mes projets</p>
+		</div>
+	</section>
 
 	<div class="img-drum-conteneur">
-		<img class="img-drum"src="assets/imgs/drum.svg">
+		<img class="img-drum" src="assets/imgs/drum.svg" alt="illustration batterie">
 	</div>
 
 	<div class="tableau2">
 		<div class="tache2-contenant">
-			<img class="img-tache2" src="assets/imgs/tache2.svg">
+			<img class="img-tache2" src="assets/imgs/tache2.svg" alt="Forme jaune">
 		</div>
 		<div>
 			<h2 id="competences">Compétences</h2>
 		</div>
 
 		<div class="tache3-conteneur">
-			<img class="tache3" src="assets/imgs/tache3.svg">
+			<img class="tache3" src="assets/imgs/tache3.svg" alt="Forme jaune">
 		</div>
 
 		<div class="competence-conteneur">
 			<div class="competence-card">
-				<img class="icon-competence" src="assets/imgs/langue-logo.svg" alt="icon-designgraphique">
+				<img class="icon-competence" src="assets/imgs/designgraphique-icon.svg" alt="icon-designgraphique">
 				<h3>Design graphique</h3>
 				<p>Muzli en page d’accueil, je reste toujours à l’affut des dernières tendances en design afin de concocter de petites perles, que ce soit pour des  identités visuelles, de l’affichage, du packaging, et bien d’autres domaines encore.</p>
 				<div class="logo-software">
@@ -92,7 +94,7 @@
 			</div>
 
 			<div class="competence-card">
-				<img class="icon-competence" src="assets/imgs/langue-logo.svg" alt="icon-video">
+				<img class="icon-competence" src="assets/imgs/video-icon.svg" alt="icon-video">
 				<h3>Vidéo/MAO</h3>
 				<p>J’ai pour deuxième passion la musique et les séries télévisées que je regarde entre deux podcasts. Le montage audio et vidéo ne me font plus peur et je m’en donne à coeur joie  de me plonger dans des découpages techniques.</p>
 				<div class="logo-software">
@@ -103,7 +105,7 @@
 			</div>
 
 			<div class="competence-card">
-				<img class="icon-competence" src="assets/imgs/langue-logo.svg" alt="icon-webdesign">
+				<img class="icon-competence" src="assets/imgs/ux-icon.svg" alt="icon-webdesign">
 				<h3>UX/Web design</h3>
 				<p>Les supports digitaux ne font que prendre de l’importance, l’interactivité en maître-mot. Ça tombe bien, mes compétences en langage CSS, HTML et mes futurs compétences en JavaScript me permettent de faire naitre ces interfaces.</p>
 				<div class="logo-software">
@@ -118,7 +120,7 @@
 	<div class="tableau3">
 
 		<div class="tache4-conteneur">
-			<img class="tache4" src="assets/imgs/tache4.svg">
+			<img class="tache4" src="assets/imgs/tache4.svg" alt="Forme jaune">
 		</div>
 
 		<div>
@@ -128,44 +130,44 @@
 		<div class="travaux-cards-containeur">
 			<div class="card-travaux">
 				<div>
-					<a href=""><img class="img-card-travaux" src="assets/imgs/jours-pro.png"></a>
+					<a href="https://www.behance.net/gallery/82129781/Event-Identity-Jours-Pro-2019" target="_blank"><img class="img-card-travaux" src="assets/imgs/jours-pro.png" alt="jours pro"></a>
 				</div>
 				<span>#GRAPHICDESIGN</span>
 			</div>
 
 			<div class="card-travaux">
 				<div>
-					<a href=""><img class="img-card-travaux" src="assets/imgs/betrue.png"></a>
+					<a><img class="img-card-travaux" src="assets/imgs/betrue.png" alt="betrue"></a>
 				</div>
 				<span>#GRAPHICDESIGN</span>
 			</div>
 
 			<div class="card-travaux">
 				<div>
-					<a><img class="img-card-travaux" src="assets/imgs/curiositemagasine.jpg"></a>
+					<a><img class="img-card-travaux" src="assets/imgs/alive-festival-story.jpg" alt="alive festival"></a>
+				</div>
+				<span>#GRAPHICDESIGN</span>
+			</div>
+
+			<div class="card-travaux">
+				<div>
+					<a><img class="img-card-travaux" src="assets/imgs/aureliengoguet.jpg" alt="aurelien goguet"></a>
 				</div>
 				<span>#WEBDESIGN</span>
 			</div>
 
 			<div class="card-travaux">
 				<div>
-					<a href=""><img class="img-card-travaux" src="assets/imgs/jours-pro.png"></a>
-				</div>
-				<span>#GRAPHICDESIGN</span>
-			</div>
-
-			<div class="card-travaux">
-				<div>
-					<a href="https://www.youtube.com/watch?v=-nolB_szXLQ" target="_blank"><img class="img-card-travaux" src="assets/imgs/bigbottes-ontemmene.jpg"></a>
+					<a href="https://www.youtube.com/watch?v=-nolB_szXLQ" target="_blank"><img class="img-card-travaux" src="assets/imgs/bigbottes-ontemmene.jpg" alt="big'bottes"></a>
 				</div>
 				<span>#VIDEO</span>
 			</div>
 
 			<div class="card-travaux">
 				<div>
-					<a href=""><img class="img-card-travaux" src="assets/imgs/jours-pro.png"></a>
+					<a><img class="img-card-travaux" src="assets/imgs/photographie1.jpg" alt="photographie"></a>
 				</div>
-				<span>#GRAPHICDESIGN</span>
+				<span>#PHOTOGRAPHIE</span>
 			</div>
 
 
@@ -187,23 +189,23 @@
 
 		<div class="actus-cards-containeur">
 
-			<div class="card-actus">
+			<article class="card-actus">
 				<div>
-					<a href="">
-						<img class="img-card-actus" src="assets/imgs/data-viz.png">
+					<a>
+						<img class="img-card-actus" src="assets/imgs/data-viz.png" alt="data visualisation">
 					</a>
 				</div>
 				<h4 class="titre-article">Data Visualization :<br>Ces quelques artistes à ne pas manquer !</h4>
 				<span>12 NOV. 2020</span>
-			</div>
+			</article>
 
-			<div class="card-actus">
+			<article class="card-actus">
 				<div>
-					<a href=""><img class="img-card-actus" src="assets/imgs/sound-design.png"></a>
+					<a><img class="img-card-actus" src="assets/imgs/sound-design.png" alt="sound design"></a>
 				</div>
 				<h4 class="titre-article">Sound Design :<br>un outil au service de l'immersion ?</h4>
 				<span>12 NOV. 2020</span>
-			</div>
+			</article>
 		</div>
 
 		<div class="img-jonglage-containeur">
@@ -224,10 +226,10 @@
 		</div>
 
 		<div class="contact-flexbox">
-			<div class="contact-box1">
-				<div>
+			<div>
+				<div class="contact-box1">
 					<p class="email1">Mon e-mail :</p>
-					<a href="mailto: brousseau.doriane@gmail.com" class="email2">brousseau.doriane@gmail.com</a>
+					<a href="mailto:brousseau.doriane@gmail.com" class="email2">brousseau.doriane@gmail.com</a>
 				</div>
 
 				<div class="cv-book-containeur">
@@ -277,6 +279,8 @@
 		<p>Doriane Brousseau © 2020 - Tous droits reservés</p>
 	</div>
 </footer>
+
+
 
 </body>
 </html>
