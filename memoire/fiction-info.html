@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- <link href="assets/3dstyles.css" rel="stylesheet"/> -->
+    <script src="https://kit.fontawesome.com/165fe74b67.js" crossorigin="anonymous"></script>
+    <script src="assets/js/scriptdarkmode.js"></script>
+    <script src="assets/js/script.js" defer></script>
+    <script src="assets/js/carrousel.js" defer></script>
+    <script src="assets/js/3dscript.js" defer></script>
+    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+    <title>Mémoire | Doriane Brousseau</title>
+</head>
+<body>
+    <nav class="nav-mobile">
+        <label for="menu-burger" class="menu-burger">
+            <input type="checkbox" id="menu-burger">
+            <span class="menu">
+                <span class="hamburger"></span>
+            </span>
+            <ul class="lien-menu">
+                <li><h2 class="button-big"><a href="memoire.html">Lire le mémoire</a></h2></li>
+                <li><h2 class="button-big"><a href="resume.html">Résumé du mémoire</a></h2></li>
+                <li><h2 class="button-big"><a href="fictions.html">Les fictions sonores</a></h2></li>
+                <li><h2 class="button-big"><a href="fictions.html">Mon projet</a></h2></li>
+            </ul>
+
+            <div class="info-menu">
+                <p class="textbody">Doriane Brousseau</p>
+                <p class="textbody">M2 Design Multimédia</p>
+                <span>
+                    <a href="https://www.linkedin.com/in/doriane-brousseau/" target="_blank"><i class="fab fa-linkedin textbody"></i></a>
+                    <a href="https://www.behance.net/brousseaudoriane" target="_blank"><i class="fab fa-behance-square textbody"></i></a> 
+                </span>
+                <p>© 2022 All Rights Reserved</p>
+            </div>
+
+        </label>
+    </nav>
+
+    <nav class="nav-desktop">
+        <ul>
+            <li><h3><a href="memoire.html">Mémoire</a></h3></li>
+            <li><h3><a href="resume.html">Résumé</a></h3></li>
+            <li><h3><a href="fictions.html">Fiction</a></h3></li>
+            <li><h3><a href="projet.html">Projet</a></h3></li>
+        </ul>
+    </nav>
+
+    <div class="dark-mode-button">
+    <div class="toggle-dark-mode">
+        <input type="checkbox" class="dark-mode" id="dark-mode" name="theme-dark-mode"/>
+        <label for="dark-mode" class="toggle">
+              <span class="toggle__handler"></span>
+              <svg class="lune" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.10374 0.00938142C1.13369 0.73947 0 2.64721 0 4.84255C0 7.68532 2.30999 9.99532 5.15277 9.99532C7.34811 9.99532 9.25584 8.86163 9.98594 6.89158C10.0172 6.80938 9.99515 6.70963 9.93223 6.64821C9.86931 6.58679 9.76906 6.56718 9.68764 6.60038C9.15493 6.8146 8.57259 6.92709 7.95821 6.92709C5.40678 6.92709 3.06822 4.58853 3.06822 2.03711C3.06822 1.42272 3.17716 0.836827 3.39138 0.30413C3.4384 0.0727374 3.27581 -0.0336897 3.10374 0.00938142Z" fill="#121212"/>
+                </svg>
+                <svg class="soleil" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.16676 3.00211C3.97027 3.00211 3.0022 3.97018 3.0022 5.16668C3.0022 6.36317 3.97027 7.33124 5.16676 7.33124C6.36325 7.33124 7.33132 6.36317 7.33132 5.16668C7.33132 3.97018 6.36325 3.00211 5.16676 3.00211Z" fill="#121212"/>
+                    <path d="M5.16661 2.30597C5.5038 2.30597 5.76485 2.03404 5.76485 1.70772V0.598246C5.76485 0.27193 5.49292 0 5.16661 0C4.84029 0 4.56836 0.27193 4.56836 0.598246V1.69684C4.56836 2.03404 4.84029 2.30597 5.16661 2.30597Z" fill="#121212"/>
+                    <path d="M2.29508 3.14352C2.40386 3.25229 2.55614 3.31755 2.71929 3.31755C2.88245 3.31755 3.03473 3.25229 3.14351 3.14352C3.25228 3.03474 3.31754 2.88246 3.31754 2.7193C3.31754 2.55615 3.25228 2.40387 3.14351 2.29509L2.36035 1.51194C2.12105 1.27264 1.74035 1.28351 1.51193 1.51194C1.40315 1.62071 1.33789 1.77299 1.33789 1.93615C1.33789 2.0993 1.40315 2.25159 1.51193 2.36036L2.29508 3.14352Z" fill="#121212"/>
+                    <path d="M2.30597 5.16664C2.30597 4.84032 2.03404 4.56839 1.70772 4.56839H0.598246C0.27193 4.56839 0 4.84032 0 5.16664C0 5.49295 0.27193 5.76488 0.598246 5.76488H1.69684C2.03404 5.76488 2.30597 5.49295 2.30597 5.16664Z" fill="#121212"/>
+                    <path d="M2.29508 7.18978L1.51193 7.96206C1.40315 8.07084 1.33789 8.22312 1.33789 8.38627C1.33789 8.54943 1.40315 8.70171 1.51193 8.81049C1.6207 8.93013 1.77298 8.98452 1.93614 8.98452C2.09929 8.98452 2.25158 8.91926 2.36035 8.81049L3.14351 8.02733C3.25228 7.91856 3.31754 7.76627 3.31754 7.60312C3.31754 7.43996 3.25228 7.28768 3.14351 7.17891C2.90421 6.96136 2.52351 6.96136 2.29508 7.18978Z" fill="#121212"/>
+                    <path d="M5.16661 8.02741C4.82941 8.02741 4.56836 8.29934 4.56836 8.62566V9.73513C4.56836 10.0614 4.84029 10.3334 5.16661 10.3334C5.49292 10.3334 5.76485 10.0614 5.76485 9.73513V8.62566C5.76485 8.29934 5.5038 8.02741 5.16661 8.02741Z" fill="#121212"/>
+                    <path d="M8.03833 7.1898C7.79903 6.96138 7.41833 6.96138 7.1899 7.1898C7.08113 7.29857 7.01587 7.45085 7.01587 7.61401C7.01587 7.77717 7.08113 7.92945 7.1899 8.03822L7.97306 8.82138C8.08183 8.93015 8.23412 8.99542 8.39727 8.99542C8.56043 8.99542 8.71271 8.93015 8.82148 8.82138C8.93026 8.71261 8.99552 8.56033 8.99552 8.39717C8.99552 8.23401 8.93026 8.08173 8.82148 7.97296L8.03833 7.1898Z" fill="#121212"/>
+                    <path d="M9.73519 4.56839H8.62571C8.28852 4.56839 8.02747 4.84032 8.02747 5.16664C8.02747 5.49295 8.2994 5.76488 8.62571 5.76488H9.73519C10.0724 5.76488 10.3334 5.49295 10.3334 5.16664C10.3334 4.84032 10.0615 4.56839 9.73519 4.56839Z" fill="#121212"/>
+                    <path d="M7.61411 3.31755C7.77727 3.31755 7.92955 3.25229 8.03833 3.14351L8.82148 2.37123C8.93026 2.26246 8.99552 2.11018 8.99552 1.94702C8.99552 1.78386 8.93026 1.63158 8.82148 1.52281C8.58219 1.28351 8.20148 1.28351 7.97306 1.52281L7.1899 2.30597C7.08113 2.41474 7.01587 2.56702 7.01587 2.73018C7.01587 2.89334 7.08113 3.04562 7.1899 3.15439C7.30955 3.25229 7.45096 3.31755 7.61411 3.31755Z" fill="#121212"/>
+                    </svg>
+                    
+            </label>
+    </div>
+    </div>
+
+    <div class="croix-fiction">
+        <a href="fictions.html">
+        <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="6.21399" y="8.07812" width="2.63636" height="20.2121" transform="rotate(-45 6.21399 8.07812)" fill="black"/>
+            <rect x="20.5061" y="6.21396" width="2.63636" height="20.2121" transform="rotate(45 20.5061 6.21396)" fill="black"/>
+            </svg>  
+        </a>          
+    </div>
+
+    <div class="info-fictions">
+        <div class="cadre-3d"> 
+            <div class="cadre-annotation">
+                <div id="annotation-introduction" class="no-display">
+                    <p>Introduction</p>
+                </div>
+                <div id="annotation-personnages" class="no-display">
+                    <p>Personnages</p>
+                </div>
+                <div id="annotation-narrateur" class="no-display">
+                    <p>Narrateur</p>
+                </div>
+                <div id="annotation-silence" class="no-display">
+                    <p>Silence</p>
+                </div>
+                <div id="annotation-son3d" class="no-display">
+                    <p>Son Spatialisé</p>
+                </div>
+                <div id="annotation-effetssonores" class="no-display">
+                    <p>Effets sonores</p>
+                </div>
+                <div id="annotation-voix" class="no-display">
+                    <p>Voix</p>
+                </div>
+                <div id="annotation-bruitage" class="no-display">
+                    <p>Bruitage</p>
+                </div>
+                <div id="annotation-musique" class="no-display">
+                    <p>Musique</p>
+                </div>
+                <div id="annotation-dialogue" class="no-display">
+                    <p>Dialogue</p>
+                </div>
+                <div id="annotation-isolement" class="no-display">
+                    <p>Isolement</p>
+                </div>
+                <div id="annotation-narration" class="no-display">
+                    <p>Narration</p>
+                </div>
+            </div>
+              <model-viewer id="model3dgodcast" class="model3d" bounds="tight" src="assets/glb/Infographie-godcast.glb" camera-controls shadow-intensity="1.2" autoplay environment-image="neutral" shadow-softness="1" min-camera-orbit="auto 100deg 9.966m" min-field-of-view="41.95deg" max-camera-orbit="auto 100deg auto" camera-orbit="-538.8deg 100deg auto" auto-rotate>
+                <div class="progress-bar hide" slot="progress-bar">
+                    <div class="update-bar"></div>
+                </div>
+              </model-viewer>  
+              <model-viewer id="model3dmentalfm" class="model3d no-display" bounds="tight" src="assets/glb/Infographie-mentalfm.glb" camera-controls shadow-intensity="0.5" autoplay environment-image="neutral" shadow-softness="1" min-camera-orbit="auto 100deg 9.966m" min-field-of-view="41.95deg" max-camera-orbit="auto 100deg auto" camera-orbit="-538.8deg 100deg auto" auto-rotate>
+                <!-- <button id="btn3d-2-1" class="Hotspot" slot="hotspot-1" data-position="0.26766797336051207m 6.420436296357515m 1.567760300946433m" data-normal="-0.6313679220778348m -0.09755129527948146m 0.7693232686981544m" data-visibility-attribute="visible">
+                    <div id="data3d-2-1" class="HotspotAnnotation">Narration</div>
+                </button>
+                <button id="btn3d-2-2" class="Hotspot" slot="hotspot-2" data-position="-1.58832540678529m 5.015120738483455m 1.1105403494872559m" data-normal="-0.9904381743747657m -0.09755100579130624m -0.09755011025255701m" data-visibility-attribute="visible">
+                    <div id="data3d-2-2" class="HotspotAnnotation">Voix</div>
+                </button>
+                <button id="btn3d-2-3" class="Hotspot" slot="hotspot-4" data-position="-0.6713125476042121m 6.193179646170916m -0.49633740447164953m" data-normal="-0.7693233009276829m -0.09755090860105856m -0.6313679425508094m" data-visibility-attribute="visible">
+                    <div id="data3d-2-3" class="HotspotAnnotation">Bruitage</div>
+                </button>
+                <button id="btn3d-2-4" class="Hotspot" slot="hotspot-5" data-position="-0.22082896588478962m 8.202272023504769m -1.1540460931024328m" data-normal="-0.46914803746438566m -0.09755081315534789m -0.877715191731376m" data-visibility-attribute="visible">
+                    <div id="data3d-2-4" class="HotspotAnnotation">Narrateur</div>
+                </button>
+                <button id="btn3d-2-5" class="Hotspot" slot="hotspot-6" data-position="2.2286208446086593m 6.416841270177356m -2.1424390640094657m" data-normal="0.7693238709673644m -0.09755025977096964m -0.6313673482042022m" data-visibility-attribute="visible">
+                    <div id="data3d-2-5" class="HotspotAnnotation">Effets sonores</div>
+                </button>
+                <button id="btn3d-2-6" class="Hotspot" slot="hotspot-7" data-position="2.3359976117494563m 7.110958715049675m -0.42597188602612174m" data-normal="0.8777152235294984m -0.09755054772426733m -0.46914803316571435m" data-visibility-attribute="visible">
+                    <div id="data3d-2-6" class="HotspotAnnotation">Personnages</div>
+                </button>
+                <button id="btn3d-2-7" class="Hotspot" slot="hotspot-9" data-position="1.2235246321446769m 6.280279962820309m -0.4741556533979033m" data-normal="0.9904381952434181m 0.09755102374081139m 0.0975498804206364m" data-visibility-attribute="visible">
+                    <div id="data3d-2-7" class="HotspotAnnotation">Silence</div>
+                </button>
+                <button id="btn3d-2-8" class="Hotspot" slot="hotspot-10" data-position="2.177758462230831m 6.322812033586961m 0.2362169491083571m" data-normal="0.41617893706922365m -0.46962862011825807m 0.778616755217708m" data-visibility-attribute="visible">
+                    <div id="data3d-2-8" class="HotspotAnnotation">Musique</div>
+                </button>
+                <button id="btn3d-2-9" class="Hotspot" slot="hotspot-11" data-position="2.2202218336855437m 5.476112343040179m -0.044572168782103516m" data-normal="0.8777149126020581m 0.09755107454496754m 0.4691485053275601m" data-visibility-attribute="visible">
+                    <div id="data3d-2-9" class="HotspotAnnotation">Son spatialisé</div>
+                </button>
+                <button id="btn3d-2-10" class="Hotspot" slot="hotspot-12" data-position="1.3736855310615461m 7.793906259127818m 1.0158663077237067m" data-normal="0.9527183619626926m -0.28900307045226364m 0.09383468467623235m" data-visibility-attribute="visible">
+                    <div id="data3d-2-10" class="HotspotAnnotation">Dialogues</div>
+                </button>
+                <button id="btn3d-2-11" class="Hotspot" slot="hotspot-13" data-position="0.7488800904541626m 7.523080856880064m 2.300197392845324m" data-normal="-0.07591540083536938m -0.6325619622291625m 0.770780264314543m" data-visibility-attribute="visible">
+                    <div id="data3d-2-11" class="HotspotAnnotation">Isolement</div>
+                </button>
+                <button id="btn3d-2-12" class="Hotspot" slot="hotspot-14" data-position="0.634644401993087m 5.343129330227699m 1.8166354597739065m" data-normal="0.09383421857035099m 0.28900276314039836m 0.9527185010917478m" data-visibility-attribute="visible">
+                    <div id="data3d-2-12" class="HotspotAnnotation">Introduction</div>
+                </button> -->
+                <div class="progress-bar hide" slot="progress-bar">
+                    <div class="update-bar"></div>
+                </div>
+              </model-viewer>  
+              <model-viewer id="model3dpopcorns" class="model3d no-display" bounds="tight" src="assets/glb/Infographie-popcorn.glb" camera-controls shadow-intensity="0.5" autoplay animation-name="Action.002" environment-image="neutral" shadow-softness="1" min-camera-orbit="auto 100deg 9.966m" min-field-of-view="41.95deg" max-camera-orbit="auto 100deg auto" camera-orbit="-538.8deg 100deg auto" auto-rotate>
+                <!-- <button id="btn3d-1" class="Hotspot" slot="hotspot-1" data-position="-1.5285147375046821m -1.3875140609824341m 1.4692755635485932m" data-normal="-0.9527186177812795m 0.28900231620431804m 0.09383441032727617m" data-visibility-attribute="visible">
+                    <div id="data3d-1" class="HotspotAnnotation">Narration</div>
+                </button><button id="btn3d-2" class="Hotspot" slot="hotspot-2" data-position="-0.44224906633805405m 0.5953542265629727m 2.3659950749818095m" data-normal="-0.7693238094414864m -0.0975513288382673m 0.6313672579951609m" data-visibility-attribute="visible">
+                    <div id="data3d-2" class="HotspotAnnotation">Isolement</div>
+                </button><button id="btn3d-3" class="Hotspot" slot="hotspot-4" data-position="1.0139888316443129m 1.0907932059233156m -1.5356400416420648m" data-normal="0.9523761534047378m 0.09755109403389216m 0.2889004092741756m" data-visibility-attribute="visible">
+                    <div id="data3d-3" class="HotspotAnnotation">Personnages</div>
+                </button><button id="btn3d-4" class="Hotspot" slot="hotspot-5" data-position="2.332989791504251m -0.5588857609959037m -0.8779642906352709m" data-normal="0.9523761543895599m 0.09755109894097845m 0.2889004043707114m" data-visibility-attribute="visible">
+                    <div id="data3d-4" class="HotspotAnnotation">Musique</div>
+                </button><button id="btn3d-5" class="Hotspot" slot="hotspot-6" data-position="2.315131567223413m -1.513422663370431m 1.0276852834012615m" data-normal="0.6313674591898661m 0.0975509081145959m 0.7693236976735803m" data-visibility-attribute="visible">
+                    <div id="data3d-5" class="HotspotAnnotation">Son spatialisé</div>
+                </button><button id="btn3d-6" class="Hotspot" slot="hotspot-7" data-position="1.0365024110023289m 1.8321926300491294m 0.14429314307976498m" data-normal="0.7693235475202579m 0.09755086867516176m 0.6313676482459067m" data-visibility-attribute="visible">
+                    <div id="data3d-6" class="HotspotAnnotation">Narrateur</div>
+                </button><button id="btn3d-7" class="Hotspot" slot="hotspot-8" data-position="-2.055038232717521m 0.8383174210091794m 0.5115874549811887m" data-normal="-0.9523763055544916m 0.0975511761939127m 0.2888998799611417m" data-visibility-attribute="visible">
+                    <div id="data3d-7" class="HotspotAnnotation">Bruitage</div>
+                </button><button id="btn3d-8" class="Hotspot" slot="hotspot-9" data-position="-0.23168545160755238m -0.09586411110336279m 0.8999723724405113m" data-normal="-0.7693238084745344m 0.09755134160000652m 0.6313672572016045m" data-visibility-attribute="visible">
+                    <div id="data3d-8" class="HotspotAnnotation">Introduction</div>
+                </button><button id="btn3d-9" class="Hotspot" slot="hotspot-10" data-position="-1.2310051414105987m -1.619124815501156m -1.1439039324623517m" data-normal="-0.28889995490958614m 0.09755080120619955m -0.9523763212287818m" data-visibility-attribute="visible">
+                    <div id="data3d-9" class="HotspotAnnotation">Voix</div>
+                </button><button id="btn3d-10" class="Hotspot" slot="hotspot-11" data-position="-1.888449337568575m 1.6186181952387682m -2.429178671441043m" data-normal="-0.28889969147216854m -0.09755079759008012m -0.9523764015119364m" data-visibility-attribute="visible">
+                    <div id="data3d-10" class="HotspotAnnotation">Dialogue</div>
+                </button><button id="btn3d-11" class="Hotspot" slot="hotspot-12" data-position="-0.5031976697084841m 0.11710867318832335m -0.9100878480209189m" data-normal="-0.40361484753384147m -0.7715060637383117m -0.49180631194124597m" data-visibility-attribute="visible">
+                    <div id="data3d-11" class="HotspotAnnotation">Silence</div>
+                </button><button id="btn3d-12" class="Hotspot" slot="hotspot-13" data-position="0.9665740658178107m -0.8971233940499126m -1.867344309993948m" data-normal="0.2889004037895055m 0.09754980965792603m -0.952376286625178m" data-visibility-attribute="visible">
+                    <div id="data3d-12" class="HotspotAnnotation">Effets sonores</div>
+                </button> -->
+                <div class="progress-bar hide" slot="progress-bar">
+                    <div class="update-bar"></div>
+                </div>
+              </model-viewer> 
+              
+        </div>
+        <div id="godcast">
+            <div class="titre-artiste">
+                <h2 class="lowercase">Godcast, le podcast de Dieu</h2>
+                <p class="textbody-large">Arte Radio</p>
+            </div>
+            <div>
+                <p class="textbody-large">Que faire quand on est Dieu, et qu’on a un peu cramé son image de marque ? Lancer son podcast, évidemment.  Rien de mieux pour reconquérir sa fanbase et réussir son comeback auprès de la commu. Le problème, c’est que Dieu n’a jamais bien compris la définition du podcast. D’un autre côté, personne n’a jamais bien compris la définition de Dieu. Ça leur fait déjà un point commun. Alleluia. </p>
+                <iframe title="Arte Radio" src="https://www.arteradio.com/son/61664529/godcast_le_podcast_de_dieu?embed" style="border:1px #DADADA solid;" name="" scrolling="no" scrolling="no" width="355" height="125"></iframe>
+            </div>      
+        </div>
+
+        <div id="mentalfm" class="no-display">
+            <div class="titre-artiste">
+                <h2 class="lowercase">Mental FM</h2>
+                <p class="textbody-large">Arte Radio</p>
+            </div>
+            <div>
+                <p class="textbody-large">Une femme se plante un micro dans le cerveau. Dans sa tête comme dans la nôtre, il y a mille radios branchées en permanence : doutes, angoisses, jugements, désirs, appétits, procrastination... Bienvenue sur Mental FM, la fréquence des voix dans nos têtes. <br>
+                Journaliste spécialiste des masculinités, Victoire Tuaillon anime chez Binge Audio le podcast "Les couilles sur la table", prix du podcast de conversation au Paris Podcast Festival 2018. <br>
+                Elle signe là une (auto)fiction vive et drôle sur nos paniques intimes, superbement mise en voix par Charlotte Duran et en sons par Arnaud Forest. Inclus le tube : "Bébé dedans ! Bébé dedans ! Baiser !". </p>
+                <iframe title="Arte Radio" src="https://www.arteradio.com/son/61660364/mental_fm?embed" style="border:1px #DADADA solid;" name="" scrolling="no" scrolling="no" width="355" height="125"></iframe>
+            </div>      
+        </div>
+
+        <div id="derniereseance" class="no-display">
+            <div class="titre-artiste">
+                <h2 class="lowercase">La dernière séance</h2>
+                <p class="textbody-large">Arte Radio</p>
+            </div>
+            <div>
+                <p class="textbody-large">Parce que son psy s’est endormi pendant leur séance, Benjamin décide de se venger. Il confie désormais ses états d'âme à son téléphone portable, sur lequel il commente ses diverses activités : croiser Eric Zemmour dans le métro, prendre des champignons hallucinogènes, faire l’amour avec sa compagne...  Une autofiction hilarante et virtuose sur la psychanalyse - et comment s'en débarrasser - face aux pouvoirs du récit. A noter, il s'agit aussi de la première fiction radio entièrement enregistrée au téléphone portable.</p>
+                <iframe id="iframegodcast" class="iframegodcast" title="Arte Radio" src="https://www.arteradio.com/son/61660323/la_derniere_seance?embed" style="border:1px #DADADA solid;" name="" scrolling="no" scrolling="no" width="355" height="125"></iframe>
+            </div>      
+        </div>
+
+        <div id="hellodemain" class="no-display">
+            <div class="titre-artiste">
+                <h2 class="lowercase">Hello Demain</h2>
+                <p class="textbody-large">Orange</p>
+            </div>
+            <div>
+                <p class="textbody-large">Une carte blanche pour 5 créations originales qui interrogent notre rapport à demain. Plus que des histoires de futur, ce sont des histoires de vie qu’ils nous content. Demain sera humain.</p>
+                <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/593050995&color=ff5500" style="border:1px #DADADA solid;" name="" scrolling="no" scrolling="no" width="355" height="125"></iframe>
+                <p class="textbody-large autres-episodes button-big"><a href="https://www.orange.com/fr/hello-demain" target="_blank">Ecouter les autres épisodes ici</a></p>
+            </div>      
+        </div>
+
+        <div id="lenuage" class="no-display">
+            <div class="titre-artiste">
+                <h2 class="lowercase">Le nuage</h2>
+                <p class="textbody-large">Nouvelles écoutes</p>
+            </div>
+            <div>
+                <p class="textbody-large">Le 25 août 2020 un accident se déclare dans l’une des plus vieilles centrales françaises le Douvrey près de Lyon. Julia Roch-Rivière directrice de la centrale va tout tenter pour protéger la population du nuage radioactif. Mais sur sa route se dresse plus puissant qu’elle. À écouter au casque pour une expérience sonore optimale.</p>
+                <iframe src="https://open.spotify.com/embed/episode/7FUfLq5LzJ7HdV7DVa4aDz?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                <p class="textbody-large autres-episodes button-big"><a href="https://nouvellesecoutes.fr/podcast/le-nuage/" target="_blank">Ecouter les autres épisodes ici</a></p>
+            </div>      
+        </div>
+
+        <div id="appelabysses" class="no-display">
+            <div class="titre-artiste">
+                <h2 class="lowercase">L'appel des abysses</h2>
+                <p class="textbody-large">France Culture</p>
+            </div>
+            <div>
+                <p class="textbody-large">L'océan a recouvert les continents. L'air est devenu irrespirable. L'élite financière s'est réfugiée dans la Cité, un agrégat de sous-marins reclus dans les abysses. À la surface, les plus pauvres étouffent sur le Territoire, un immense bidonville flottant où gronde la révolution. Marin, 16 ans, n'a connu que la pollution et le sentiment d’injustice. Il survit auprès de sa mère et de sa sœur adoptives en plongeant chaque jour pour récupérer nourriture et matériel. Lorsqu'il apprend qu'il est le fils de Léonie Montreuil, la Présidente de la Cité immergée, Marin perd pied. Et tandis que les siens se révoltent pour gagner leur place dans les profondeurs, il s'efforce de renouer avec son passé sans renier qui il est.</p>
+                <iframe width="560" height="125" src="https://www.youtube.com/embed/0QDubDnWovc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p class="textbody-large autres-episodes button-big"><a href="https://www.franceculture.fr/emissions/l-appel-des-abysses" target="_blank">Ecouter les autres épisodes ici</a></p>
+                
+            </div>      
+        </div>
+
+        <div id="raproll" class="no-display">
+            <div class="titre-artiste">
+                <h2 class="lowercase">Rap&Roll</h2>
+                <p class="textbody-large">La Toile sur Écoute</p>
+            </div>
+            <div>
+                <p class="textbody-large">Léa, 30 ans, rêve de devenir slameuse et passe un concours : le “Rap&Roll”.</p>
+                <iframe src="https://open.spotify.com/embed/episode/09P4gRLNBzpXVrsGBFvsRY?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                <p class="textbody-large autres-episodes button-big"><a href="https://latoilesurecoute.com/123-fiction/" target="_blank">Ecouter les autres épisodes ici</a></p>
+            </div>      
+        </div>
+
+        <div id="epopeetemporelle" class="no-display">
+            <div class="titre-artiste">
+                <h2 class="lowercase">L'épopée temporelle</h2>
+                <p class="textbody-large">Cyprien Lov</p>
+            </div>
+            <div>
+                <p class="textbody-large">Thomas, un jeune homme sans énergie ni charisme, reçoit la visite d'un robot, Eliott (dit aussi KB28). Ensemble, ils partent dans une folle aventure à travers le temps à la recherche d'Iris, l'ex-petite amie de Thomas, et du père de celle-ci, un scientifique mystérieux.</p>
+                <iframe width="560" height="125" src="https://www.youtube.com/embed/XZnySZWeSJM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p class="textbody-large  autres-episodes button-big"><a href="https://www.youtube.com/watch?v=XZnySZWeSJM&list=PLN-TcjS0qZKXFfIUWXxv9bvs19868yJiJ" target="_blank">Ecouter les autres épisodes ici</a></p>
+            </div>      
+        </div>
+
+        <div id="popcorn" class="no-display">
+            <div class="titre-artiste">
+                <h2 class="lowercase">POPCORNS</h2>
+                <p class="textbody-large">Javras</p>
+            </div>
+            <div>
+                <p class="textbody-large">Locaux de l'entreprise agro-alimentaire WonderCereals, 2042. Alors qu'une fête est organisée pour le lancement publicitaire du MegaPopcorn, produit fard de cette industrie, Adeline, une employée, et son ami, Romuald, partent explorer le bâtiment. Ils se retrouvent malgré eux mêlés à une histoire qui pourrait mettre leur vie en péril...</p>
+                <audio class="player" controls src="/assets/audio/popcorns/Popcorns1.mp3">Your browser does not support the <code>audio</code> element.
+                </audio>
+                <p class="textbody-large autres-episodes button-big"><a href="https://javras.fr/sagas-mp3/popcorns/" target="_blank">Ecouter les autres épisodes ici</a></p>
+            </div>      
+        </div>
+
+        <div id="lamission" class="no-display">
+            <div class="titre-artiste">
+                <h2 class="lowercase">La mission</h2>
+                <p class="textbody-large">Arte Radio</p>
+            </div>
+            <div>
+                <p class="textbody-large">Une mini-fiction percutante dans la série 'Dans la tête' : 3 mn dans la tête d'un personnage. Une création du collectif Résiste, auteurs radio et sound-designers.</p>
+                <iframe title="Arte Radio" src="https://www.arteradio.com/son/19296/la_mission?embed" style="border:1px #DADADA solid;" name="" scrolling="no" scrolling="no" width="600" height="125"></iframe>
+                
+            </div>      
+        </div>
+
+        <div id="unhommepapa" class="no-display">
+            <div class="titre-artiste">
+                <h2 class="lowercase">Tu seras un homme papa</h2>
+                <p class="textbody-large">Arte Radio</p>
+            </div>
+            <div>
+                <p class="textbody-large">"Tu seras un homme papa" est une histoire vraie. C’est autour de la couveuse de Roman, né prématurément, que se tisse ce récit bouleversant d’une famille mise à l’épreuve 13 jours durant. Au micro, Gaël Leiblang nous plonge dans le journal de bord d’un père qui se bat pour trouver le chemin de la résilience. Écrite avec pudeur, réalisée par Sabine Zovighian et Samuel Hirsch, cette autofiction sonore est racontée en éclats fragmentés à travers l’allégorie du sport. Une manière pour l'auteur, ancien journaliste sportif, de nous arracher à la réalité désincarnée de l’hôpital. Le sport pour affronter ses peurs et mener cet inconcevable combat que représente la perte de l’enfant. On ne sort pas indemne de ce témoignage, mais plus vivant que jamais.</p>
+                <iframe title="Arte Radio" src="https://www.arteradio.com/son/61663990/tu_seras_un_homme_papa?embed" style="border:1px #DADADA solid;" name="" scrolling="no" scrolling="no" scrolling="no" width="600" height="150"></iframe>
+            </div>      
+        </div>
+
+        <div id="spotify3d" class="no-display">
+            <div class="titre-artiste">
+                <h2 class="lowercase">Spotify en mode 3D</h2>
+                <p class="textbody-large">Moustic Studio</p>
+            </div>
+            <div>
+                <p class="textbody-large">Problématique : La régie commerciale de Spotify souhaite démontrer la force de l’audio à ses clients et prospects. Comment une simple publicité peut plonger l’auditeur dans un univers imaginaire aussi fort que la vidéo, et le faire entrer dans un canal de transformation ?
+                <br><br>
+                Réponse : Le studio a écrit et produit une fiction en son binaural (son 3D), permettant grâce à de simples écouteurs, d’immerger l’auditeur dans un récit haletant et voyageant de la jungle à l’espace.</p>
+                <audio class="player" controls src="/assets/audio/spotify3d/spotify3d.mp3">Your browser does not support the <code>audio</code> element.
+                </audio>
+            </div>      
+        </div>
+
+    </div>
+    <div class="slider-fiction">
+        <div class="dot selected" id="dot1"></div>
+        <div class="dot" id="dot2"></div>
+        <div class="dot" id="dot3"></div>
+        <div class="dot" id="dot4"></div>
+        <div class="dot" id="dot5"></div>
+        <div class="dot" id="dot6"></div>
+        <div class="dot" id="dot7"></div>
+        <div class="dot" id="dot8"></div>
+        <div class="dot" id="dot9"></div>
+        <div class="dot" id="dot10"></div>
+        <div class="dot" id="dot11"></div>
+        <div class="dot" id="dot12"></div>
+    </div>
+
+    <!-- <script src="assets/js/3dscript.js"></script> -->
+    <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+
+</body>
+</html>
