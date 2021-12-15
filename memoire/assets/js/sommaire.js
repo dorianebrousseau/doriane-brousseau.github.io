@@ -110,5 +110,13 @@ refAll.forEach(el => {
     })
 })
 
-
+refOverlayAll.forEach(el =>{
+        let croixOverlay = el.querySelector('.croix-overlay');
+        console.log(croixOverlay);
+        
+        croixOverlay.addEventListener("click", event =>{
+            // let refOverlay = el.querySelector('.ref-overlay');
+            el.classList.remove("afficher");
+        })
+})
 
