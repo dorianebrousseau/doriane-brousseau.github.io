@@ -323,9 +323,13 @@ input:checked + .toggle .soleil > path {
   margin-bottom: 50px;
 }
 
-#iframelenuage, #iframeappeldesabysses, #iframeraproll, #iframeepopeetemporelle {
+#iframeappeldesabysses, #iframeepopeetemporelle {
   width: 95%;
   height: auto;
+}
+
+#iframeraproll, #iframelenuage {
+  width: 95%;
 }
 
 .div-dot {
@@ -634,6 +638,7 @@ input:checked + .toggle .soleil > path {
     margin-left: 312px;
     transform: translate(-312px);
     transition: transform 0.5s ease-in-out;
+    cursor: pointer;
   }
   .sommaire-desktop svg {
     height: 20px;
@@ -978,6 +983,7 @@ h1.animate__animated.animate__fadeIn {
   .page-fiction .text-fictions {
     margin: 0 10%;
     max-width: 508px;
+    margin-bottom: 100px;
   }
   .page-fiction h2 {
     text-align: left;
@@ -1146,6 +1152,12 @@ body.animationactive .menu-burger .menu .hamburger {
 body.animationactive .menu-burger .menu .hamburger:after, body.animationactive .menu-burger .menu .hamburger:before {
   transition: 0.5s ease-in-out;
 }
+body.animationactive .slider-fiction {
+  transition: 0.5s ease-in-out;
+}
+body.animationactive .slider-fiction .dot {
+  transition: 0.5s ease-in-out;
+}
 
 body.darkmode {
   background-color: #121212 !important;
@@ -1221,4 +1233,11 @@ body.darkmode .dot-collision::before {
 body.darkmode .dot-collision::after {
   background-color: #DDDDDD;
   color: #DDDDDD;
+}
+body.darkmode .slider-fiction {
+  background-color: #121212;
+  box-shadow: 0px 0px 10px #121212;
+}
+body.darkmode .croix-overlay:before {
+  background-image: url(../img/croix-blanc.svg);
 }/*# sourceMappingURL=style.css.map */
