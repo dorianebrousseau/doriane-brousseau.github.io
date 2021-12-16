@@ -608,6 +608,10 @@ input:checked + .toggle .soleil > path {
 }
 
 .ancre {
+  padding-top: 60px;
+  margin-top: -60px;
+}
+.ancre#avant-propos {
   padding-top: 40px;
   margin-top: -40px;
 }
@@ -950,6 +954,11 @@ h1.animate__animated.animate__fadeIn {
   padding-bottom: 43px;
 }
 
+.iframe-memoire iframe {
+  width: 80% !important;
+  margin: 0 10%;
+}
+
 @media screen and (min-width: 900px) {
   .text-memoire {
     margin-left: 327px;
@@ -1240,4 +1249,9 @@ body.darkmode .slider-fiction {
 }
 body.darkmode .croix-overlay:before {
   background-image: url(../img/croix-blanc.svg);
+}
+@media screen and (min-width: 900px) {
+  body.darkmode .croix-overlay:before {
+    background: none;
+  }
 }/*# sourceMappingURL=style.css.map */

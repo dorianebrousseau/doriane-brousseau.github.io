@@ -1,24 +1,33 @@
-// Handles loading the events for <model-viewer>'s slotted progress bar
-const onProgress = (event) => {
-  const progressBar = event.target.querySelector('.progress-bar');
-  const updatingBar = event.target.querySelector('.update-bar');
-  updatingBar.style.width = `${event.detail.totalProgress * 100}%`;
-  if (event.detail.totalProgress === 1) {
-    progressBar.classList.add('hide');
-  } else {
-    progressBar.classList.remove('hide');
-    if (event.detail.totalProgress === 0) {
-      event.target.querySelector('.center-pre-prompt').classList.add('hide');
-    }
-  }
-};
-document.querySelector('model-viewer').addEventListener('progress', onProgress);
+// // Handles loading the events for <model-viewer>'s slotted progress bar
+// const onProgress = (event) => {
+//   const progressBar = event.target.querySelector('.progress-bar');
+//   const updatingBar = event.target.querySelector('.update-bar');
+//   updatingBar.style.width = `${event.detail.totalProgress * 100}%`;
+//   if (event.detail.totalProgress === 1) {
+//     progressBar.classList.add('hide');
+//   } else {
+//     progressBar.classList.remove('hide');
+//     if (event.detail.totalProgress === 0) {
+//       event.target.querySelector('.center-pre-prompt').classList.add('hide');
+//     }
+//   }
+// };
+// document.querySelector('model-viewer').addEventListener('progress', onProgress);
 
 // Matériels
 
 const model3dGodcast = document.getElementById("model3dgodcast");
 const model3dMentalFM = document.getElementById("model3dmentalfm");
 const model3dPopCorns = document.getElementById("model3dpopcorns");
+const model3dHelloDemain = document.getElementById("model3dhellodemain");
+const model3dDerniereSeance = document.getElementById("model3dderniereseance");
+const model3dLeNuage = document.getElementById("model3dlenuage");
+const model3dAppelAbysses = document.getElementById("model3dappelabysses");
+const model3dRapRoll = document.getElementById("model3draproll");
+const model3dEpopeeTemporelle = document.getElementById("model3depopeetemporelle");
+const model3dLaMission = document.getElementById("model3dlamission");
+const model3dUnHomme = document.getElementById("model3dunhomme");
+const model3dSpotify = document.getElementById("model3dspotify");
 
 
 model3dMentalFM.addEventListener("load", (ev) => {
@@ -33,6 +42,51 @@ model3dGodcast.addEventListener("load", (ev) => {
 
 model3dPopCorns.addEventListener("load", (ev) => {
   let material = model3dPopCorns.model.materials[0];
+  material.pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002]);
+});
+
+model3dDerniereSeance.addEventListener("load", (ev) => {
+  let material = model3dDerniereSeance.model.materials[0];
+  material.pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002]);
+});
+
+model3dHelloDemain.addEventListener("load", (ev) => {
+  let material = model3dHelloDemain.model.materials[0];
+  material.pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002]);
+});
+
+model3dLeNuage.addEventListener("load", (ev) => {
+  let material = model3dLeNuage.model.materials[0];
+  material.pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002]);
+});
+
+model3dAppelAbysses.addEventListener("load", (ev) => {
+  let material = model3dAppelAbysses.model.materials[0];
+  material.pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002]);
+});
+
+model3dRapRoll.addEventListener("load", (ev) => {
+  let material = model3dRapRoll.model.materials[0];
+  material.pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002]);
+});
+
+model3dEpopeeTemporelle.addEventListener("load", (ev) => {
+  let material = model3dEpopeeTemporelle.model.materials[0];
+  material.pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002]);
+});
+
+model3dLaMission.addEventListener("load", (ev) => {
+  let material = model3dLaMission.model.materials[0];
+  material.pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002]);
+});
+
+model3dUnHomme.addEventListener("load", (ev) => {
+  let material = model3dUnHomme.model.materials[0];
+  material.pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002]);
+});
+
+model3dSpotify.addEventListener("load", (ev) => {
+  let material = model3dSpotify.model.materials[0];
   material.pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002]);
 });
 
@@ -695,6 +749,1863 @@ model3dpopcorns.addEventListener("load", () => {
 
 });
 
+// Select material La Dernière Séance
+
+function HideAllAnnotationsDerniereSeance(){
+  annotationIntroduction.classList.add("no-display");
+  annotationPersonnages.classList.add("no-display");
+  annotationSilence.classList.add("no-display");
+  annotationSon3d.classList.add("no-display");
+  annotationVoix.classList.add("no-display");
+  annotationNarrateur.classList.add("no-display");
+  annotationNarration.classList.add("no-display");
+  annotationDialogue.classList.add("no-display");
+  annotationEffetsSonores.classList.add("no-display");
+  annotationBruitage.classList.add("no-display");
+  annotationMusique.classList.add("no-display");
+  annotationIsolement.classList.add("no-display");
+
+
+  // personnages
+  model3dDerniereSeance.model.materials[0].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // narrateur
+  model3dDerniereSeance.model.materials[1].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // silence
+  model3dDerniereSeance.model.materials[2].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // narration
+  model3dDerniereSeance.model.materials[3].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // dialogue
+  model3dDerniereSeance.model.materials[4].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // son3d
+  model3dDerniereSeance.model.materials[5].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // effets sonores
+  model3dDerniereSeance.model.materials[6].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // voix
+  model3dDerniereSeance.model.materials[7].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // bruitage
+  model3dDerniereSeance.model.materials[8].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // musique
+  model3dDerniereSeance.model.materials[9].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // intro
+  model3dDerniereSeance.model.materials[10].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // isolement
+  model3dDerniereSeance.model.materials[11].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  
+};
+
+model3dDerniereSeance.addEventListener("load", () => {
+  HideAllAnnotationsDerniereSeance();
+
+  const changeColorDerniereSeance = async (event) => {
+    let materialDerniereSeance = model3dDerniereSeance.materialFromPoint(event.clientX, event.clientY);
+
+    // définir les 12 materiel
+    let material0DerniereSeance = model3dDerniereSeance.model.materials[0];
+    let material1DerniereSeance = model3dDerniereSeance.model.materials[1];
+    let material2DerniereSeance = model3dDerniereSeance.model.materials[2];
+    let material3DerniereSeance = model3dDerniereSeance.model.materials[3];
+    let material4DerniereSeance = model3dDerniereSeance.model.materials[4];
+    let material5DerniereSeance = model3dDerniereSeance.model.materials[5];
+    let material6DerniereSeance = model3dDerniereSeance.model.materials[6];
+    let material7DerniereSeance = model3dDerniereSeance.model.materials[7];
+    let material8DerniereSeance = model3dDerniereSeance.model.materials[8];
+    let material9DerniereSeance = model3dDerniereSeance.model.materials[9];
+    let material10DerniereSeance = model3dDerniereSeance.model.materials[10];
+    let material11DerniereSeance = model3dDerniereSeance.model.materials[11];
+    
+
+    // affichage et masquage des annotations
+    if(materialDerniereSeance === material1DerniereSeance) {
+      if (annotationNarrateur.classList.contains('no-display')) {
+        HideAllAnnotationsDerniereSeance();
+          annotationNarrateur.classList.remove('no-display');
+          model3dDerniereSeance.model.materials[1].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsDerniereSeance();
+        
+      }
+    }
+
+    if(materialDerniereSeance === material0DerniereSeance) {
+      if (annotationPersonnages.classList.contains('no-display')) {
+        HideAllAnnotationsDerniereSeance();
+        annotationPersonnages.classList.remove('no-display');
+        model3dDerniereSeance.model.materials[0].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+    } 
+    else {
+      HideAllAnnotationsDerniereSeance();
+    }
+    }
+
+    if(materialDerniereSeance === material2DerniereSeance) {
+      if (annotationSilence.classList.contains('no-display')) {
+        HideAllAnnotationsDerniereSeance();
+          annotationSilence.classList.remove('no-display');
+          model3dDerniereSeance.model.materials[2].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsDerniereSeance();
+        
+      }
+    }
+
+    if(materialDerniereSeance === material3DerniereSeance) {
+      if (annotationNarration.classList.contains('no-display')) {
+        HideAllAnnotationsDerniereSeance();
+          annotationNarration.classList.remove('no-display');
+          model3dDerniereSeance.model.materials[3].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsDerniereSeance();
+        
+      }
+    }
+
+    if(materialDerniereSeance === material4DerniereSeance) {
+      if (annotationDialogue.classList.contains('no-display')) {
+        HideAllAnnotationsDerniereSeance();
+          annotationDialogue.classList.remove('no-display');
+          model3dDerniereSeance.model.materials[4].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsDerniereSeance();
+        
+      }
+    }
+
+    if(materialDerniereSeance === material5DerniereSeance) {
+      if (annotationSon3d.classList.contains('no-display')) {
+        HideAllAnnotationsDerniereSeance();
+          annotationSon3d.classList.remove('no-display');
+          model3dDerniereSeance.model.materials[5].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsDerniereSeance();
+        
+      }
+    }
+
+    if(materialDerniereSeance === material6DerniereSeance) {
+      if (annotationEffetsSonores.classList.contains('no-display')) {
+        HideAllAnnotationsDerniereSeance();
+          annotationEffetsSonores.classList.remove('no-display');
+          model3dDerniereSeance.model.materials[6].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsDerniereSeance();
+        
+      }
+    }
+
+    if(materialDerniereSeance === material7DerniereSeance) {
+      if (annotationVoix.classList.contains('no-display')) {
+        HideAllAnnotationsDerniereSeance();
+          annotationVoix.classList.remove('no-display');
+          model3dDerniereSeance.model.materials[7].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsDerniereSeance();
+        
+      }
+    }
+
+    if(materialDerniereSeance === material8DerniereSeance) {
+      if (annotationBruitage.classList.contains('no-display')) {
+        HideAllAnnotationsDerniereSeance();
+          annotationBruitage.classList.remove('no-display');
+          model3dDerniereSeance.model.materials[8].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsDerniereSeance();
+        
+      }
+    }
+
+    if(materialDerniereSeance === material9DerniereSeance) {
+      if (annotationMusique.classList.contains('no-display')) {
+        HideAllAnnotationsDerniereSeance();
+          annotationMusique.classList.remove('no-display');
+          model3dDerniereSeance.model.materials[9].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsDerniereSeance();
+        
+      }
+    }
+
+    if(materialDerniereSeance === material10DerniereSeance) {
+      if (annotationIntroduction.classList.contains('no-display')) {
+        HideAllAnnotationsDerniereSeance();
+          annotationIntroduction.classList.remove('no-display');
+          model3dDerniereSeance.model.materials[10].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsDerniereSeance();
+        
+      }
+    }
+
+    if(materialDerniereSeance === material11DerniereSeance) {
+      if (annotationIsolement.classList.contains('no-display')) {
+        HideAllAnnotationsDerniereSeance();
+          annotationIsolement.classList.remove('no-display');
+          model3dDerniereSeance.model.materials[11].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsDerniereSeance();
+        
+      }
+    }
+
+  }
+
+  model3dDerniereSeance.addEventListener("click", changeColorDerniereSeance);
+
+});
+
+
+// Select material HELLO DEMAIN
+
+
+function HideAllAnnotationsHelloDemain(){
+  annotationIntroduction.classList.add("no-display");
+  annotationPersonnages.classList.add("no-display");
+  annotationSilence.classList.add("no-display");
+  annotationSon3d.classList.add("no-display");
+  annotationVoix.classList.add("no-display");
+  annotationNarrateur.classList.add("no-display");
+  annotationNarration.classList.add("no-display");
+  annotationDialogue.classList.add("no-display");
+  annotationEffetsSonores.classList.add("no-display");
+  annotationBruitage.classList.add("no-display");
+  annotationMusique.classList.add("no-display");
+  annotationIsolement.classList.add("no-display");
+
+
+  // personnages
+  model3dHelloDemain.model.materials[0].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // narrateur
+  model3dHelloDemain.model.materials[1].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // silence
+  model3dHelloDemain.model.materials[2].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // narration
+  model3dHelloDemain.model.materials[3].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // dialogue
+  model3dHelloDemain.model.materials[4].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // son3d
+  model3dHelloDemain.model.materials[5].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // effets sonores
+  model3dHelloDemain.model.materials[6].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // voix
+  model3dHelloDemain.model.materials[7].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // bruitage
+  model3dHelloDemain.model.materials[8].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // musique
+  model3dHelloDemain.model.materials[9].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // intro
+  model3dHelloDemain.model.materials[10].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // isolement
+  model3dHelloDemain.model.materials[11].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  
+};
+
+model3dHelloDemain.addEventListener("load", () => {
+  HideAllAnnotationsHelloDemain();
+
+  const changeColorHelloDemain = async (event) => {
+    let materialHelloDemain = model3dHelloDemain.materialFromPoint(event.clientX, event.clientY);
+
+    // définir les 12 materiel
+    let material0HelloDemain = model3dHelloDemain.model.materials[0];
+    let material1HelloDemain = model3dHelloDemain.model.materials[1];
+    let material2HelloDemain = model3dHelloDemain.model.materials[2];
+    let material3HelloDemain = model3dHelloDemain.model.materials[3];
+    let material4HelloDemain = model3dHelloDemain.model.materials[4];
+    let material5HelloDemain = model3dHelloDemain.model.materials[5];
+    let material6HelloDemain = model3dHelloDemain.model.materials[6];
+    let material7HelloDemain = model3dHelloDemain.model.materials[7];
+    let material8HelloDemain = model3dHelloDemain.model.materials[8];
+    let material9HelloDemain = model3dHelloDemain.model.materials[9];
+    let material10HelloDemain = model3dHelloDemain.model.materials[10];
+    let material11HelloDemain = model3dHelloDemain.model.materials[11];
+    
+
+    // affichage et masquage des annotations
+    if(materialHelloDemain === material1HelloDemain) {
+      if (annotationNarrateur.classList.contains('no-display')) {
+        HideAllAnnotationsHelloDemain();
+          annotationNarrateur.classList.remove('no-display');
+          model3dHelloDemain.model.materials[1].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsHelloDemain();
+        
+      }
+    }
+
+    if(materialHelloDemain === material0HelloDemain) {
+      if (annotationPersonnages.classList.contains('no-display')) {
+        HideAllAnnotationsHelloDemain();
+        annotationPersonnages.classList.remove('no-display');
+        model3dHelloDemain.model.materials[0].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+    } 
+    else {
+      HideAllAnnotationsHelloDemain();
+    }
+    }
+
+    if(materialHelloDemain === material2HelloDemain) {
+      if (annotationSilence.classList.contains('no-display')) {
+        HideAllAnnotationsHelloDemain();
+          annotationSilence.classList.remove('no-display');
+          model3dHelloDemain.model.materials[2].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsHelloDemain();
+        
+      }
+    }
+
+    if(materialHelloDemain === material3HelloDemain) {
+      if (annotationNarration.classList.contains('no-display')) {
+        HideAllAnnotationsHelloDemain();
+          annotationNarration.classList.remove('no-display');
+          model3dHelloDemain.model.materials[3].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsHelloDemain();
+        
+      }
+    }
+
+    if(materialHelloDemain === material4HelloDemain) {
+      if (annotationDialogue.classList.contains('no-display')) {
+        HideAllAnnotationsHelloDemain();
+          annotationDialogue.classList.remove('no-display');
+          model3dHelloDemain.model.materials[4].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsHelloDemain();
+        
+      }
+    }
+
+    if(materialHelloDemain === material5HelloDemain) {
+      if (annotationSon3d.classList.contains('no-display')) {
+        HideAllAnnotationsHelloDemain();
+          annotationSon3d.classList.remove('no-display');
+          model3dHelloDemain.model.materials[5].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsHelloDemain();
+        
+      }
+    }
+
+    if(materialHelloDemain === material6HelloDemain) {
+      if (annotationEffetsSonores.classList.contains('no-display')) {
+        HideAllAnnotationsHelloDemain();
+          annotationEffetsSonores.classList.remove('no-display');
+          model3dHelloDemain.model.materials[6].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsHelloDemain();
+        
+      }
+    }
+
+    if(materialHelloDemain === material7HelloDemain) {
+      if (annotationVoix.classList.contains('no-display')) {
+        HideAllAnnotationsHelloDemain();
+          annotationVoix.classList.remove('no-display');
+          model3dHelloDemain.model.materials[7].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsHelloDemain();
+        
+      }
+    }
+
+    if(materialHelloDemain === material8HelloDemain) {
+      if (annotationBruitage.classList.contains('no-display')) {
+        HideAllAnnotationsHelloDemain();
+          annotationBruitage.classList.remove('no-display');
+          model3dHelloDemain.model.materials[8].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsHelloDemain();
+        
+      }
+    }
+
+    if(materialHelloDemain === material9HelloDemain) {
+      if (annotationMusique.classList.contains('no-display')) {
+        HideAllAnnotationsHelloDemain();
+          annotationMusique.classList.remove('no-display');
+          model3dHelloDemain.model.materials[9].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsHelloDemain();
+        
+      }
+    }
+
+    if(materialHelloDemain === material10HelloDemain) {
+      if (annotationIntroduction.classList.contains('no-display')) {
+        HideAllAnnotationsHelloDemain();
+          annotationIntroduction.classList.remove('no-display');
+          model3dHelloDemain.model.materials[10].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsHelloDemain();
+        
+      }
+    }
+
+    if(materialHelloDemain === material11HelloDemain) {
+      if (annotationIsolement.classList.contains('no-display')) {
+        HideAllAnnotationsHelloDemain();
+          annotationIsolement.classList.remove('no-display');
+          model3dHelloDemain.model.materials[11].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsHelloDemain();
+        
+      }
+    }
+
+  }
+
+  model3dHelloDemain.addEventListener("click", changeColorHelloDemain);
+
+});
+
+// Select material Le Nuage
+
+
+function HideAllAnnotationsLeNuage(){
+  annotationIntroduction.classList.add("no-display");
+  annotationPersonnages.classList.add("no-display");
+  annotationSilence.classList.add("no-display");
+  annotationSon3d.classList.add("no-display");
+  annotationVoix.classList.add("no-display");
+  annotationNarrateur.classList.add("no-display");
+  annotationNarration.classList.add("no-display");
+  annotationDialogue.classList.add("no-display");
+  annotationEffetsSonores.classList.add("no-display");
+  annotationBruitage.classList.add("no-display");
+  annotationMusique.classList.add("no-display");
+  annotationIsolement.classList.add("no-display");
+
+
+  // personnages
+  model3dLeNuage.model.materials[0].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // narrateur
+  model3dLeNuage.model.materials[1].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // silence
+  model3dLeNuage.model.materials[2].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // narration
+  model3dLeNuage.model.materials[3].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // dialogue
+  model3dLeNuage.model.materials[4].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // son3d
+  model3dLeNuage.model.materials[5].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // effets sonores
+  model3dLeNuage.model.materials[6].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // voix
+  model3dLeNuage.model.materials[7].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // bruitage
+  model3dLeNuage.model.materials[8].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // musique
+  model3dLeNuage.model.materials[9].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // intro
+  model3dLeNuage.model.materials[10].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // isolement
+  model3dLeNuage.model.materials[11].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  
+};
+
+model3dLeNuage.addEventListener("load", () => {
+  HideAllAnnotationsLeNuage();
+
+  const changeColorLeNuage = async (event) => {
+    let materialLeNuage = model3dLeNuage.materialFromPoint(event.clientX, event.clientY);
+
+    // définir les 12 materiel
+    let material0LeNuage = model3dLeNuage.model.materials[0];
+    let material1LeNuage = model3dLeNuage.model.materials[1];
+    let material2LeNuage = model3dLeNuage.model.materials[2];
+    let material3LeNuage = model3dLeNuage.model.materials[3];
+    let material4LeNuage = model3dLeNuage.model.materials[4];
+    let material5LeNuage = model3dLeNuage.model.materials[5];
+    let material6LeNuage = model3dLeNuage.model.materials[6];
+    let material7LeNuage = model3dLeNuage.model.materials[7];
+    let material8LeNuage = model3dLeNuage.model.materials[8];
+    let material9LeNuage = model3dLeNuage.model.materials[9];
+    let material10LeNuage = model3dLeNuage.model.materials[10];
+    let material11LeNuage = model3dLeNuage.model.materials[11];
+    
+
+    // affichage et masquage des annotations
+    if(materialLeNuage === material1LeNuage) {
+      if (annotationNarrateur.classList.contains('no-display')) {
+        HideAllAnnotationsLeNuage();
+          annotationNarrateur.classList.remove('no-display');
+          model3dLeNuage.model.materials[1].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsLeNuage();
+      }
+    }
+
+    if(materialLeNuage === material0LeNuage) {
+      if (annotationPersonnages.classList.contains('no-display')) {
+        HideAllAnnotationsLeNuage();
+        annotationPersonnages.classList.remove('no-display');
+        model3dLeNuage.model.materials[0].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+    } 
+    else {
+      HideAllAnnotationsLeNuage();
+    }
+    }
+
+    if(materialLeNuage === material2LeNuage) {
+      if (annotationSilence.classList.contains('no-display')) {
+        HideAllAnnotationsLeNuage();
+          annotationSilence.classList.remove('no-display');
+          model3dLeNuage.model.materials[2].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsLeNuage();
+      }
+    }
+
+    if(materialLeNuage === material3LeNuage) {
+      if (annotationNarration.classList.contains('no-display')) {
+        HideAllAnnotationsLeNuage();
+          annotationNarration.classList.remove('no-display');
+          model3dLeNuage.model.materials[3].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsLeNuage();
+      }
+    }
+
+    if(materialLeNuage === material4LeNuage) {
+      if (annotationDialogue.classList.contains('no-display')) {
+        HideAllAnnotationsLeNuage();
+          annotationDialogue.classList.remove('no-display');
+          model3dLeNuage.model.materials[4].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsLeNuage();
+      }
+    }
+
+    if(materialLeNuage === material5LeNuage) {
+      if (annotationSon3d.classList.contains('no-display')) {
+        HideAllAnnotationsLeNuage();
+          annotationSon3d.classList.remove('no-display');
+          model3dLeNuage.model.materials[5].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsLeNuage();
+      }
+    }
+
+    if(materialLeNuage === material6LeNuage) {
+      if (annotationEffetsSonores.classList.contains('no-display')) {
+        HideAllAnnotationsLeNuage();
+          annotationEffetsSonores.classList.remove('no-display');
+          model3dLeNuage.model.materials[6].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsLeNuage();
+      }
+    }
+
+    if(materialLeNuage === material7LeNuage) {
+      if (annotationVoix.classList.contains('no-display')) {
+        HideAllAnnotationsLeNuage();
+          annotationVoix.classList.remove('no-display');
+          model3dLeNuage.model.materials[7].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsLeNuage();
+      }
+    }
+
+    if(materialLeNuage === material8LeNuage) {
+      if (annotationBruitage.classList.contains('no-display')) {
+        HideAllAnnotationsLeNuage();
+          annotationBruitage.classList.remove('no-display');
+          model3dLeNuage.model.materials[8].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsLeNuage();
+      }
+    }
+
+    if(materialLeNuage === material9LeNuage) {
+      if (annotationMusique.classList.contains('no-display')) {
+        HideAllAnnotationsLeNuage();
+          annotationMusique.classList.remove('no-display');
+          model3dLeNuage.model.materials[9].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsLeNuage();
+      }
+    }
+
+    if(materialLeNuage === material10LeNuage) {
+      if (annotationIntroduction.classList.contains('no-display')) {
+        HideAllAnnotationsLeNuage();
+          annotationIntroduction.classList.remove('no-display');
+          model3dLeNuage.model.materials[10].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsLeNuage();
+      }
+    }
+
+    if(materialLeNuage === material11LeNuage) {
+      if (annotationIsolement.classList.contains('no-display')) {
+        HideAllAnnotationsLeNuage();
+          annotationIsolement.classList.remove('no-display');
+          model3dLeNuage.model.materials[11].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsLeNuage();
+      }
+    }
+
+  }
+
+  model3dLeNuage.addEventListener("click", changeColorLeNuage);
+
+});
+
+// select ball - L'appel des abysses
+
+
+
+function HideAllAnnotationsAppelAbysses(){
+  annotationIntroduction.classList.add("no-display");
+  annotationPersonnages.classList.add("no-display");
+  annotationSilence.classList.add("no-display");
+  annotationSon3d.classList.add("no-display");
+  annotationVoix.classList.add("no-display");
+  annotationNarrateur.classList.add("no-display");
+  annotationNarration.classList.add("no-display");
+  annotationDialogue.classList.add("no-display");
+  annotationEffetsSonores.classList.add("no-display");
+  annotationBruitage.classList.add("no-display");
+  annotationMusique.classList.add("no-display");
+  annotationIsolement.classList.add("no-display");
+
+
+  // personnages
+  model3dAppelAbysses.model.materials[0].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // narrateur
+  model3dAppelAbysses.model.materials[1].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // silence
+  model3dAppelAbysses.model.materials[2].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // narration
+  model3dAppelAbysses.model.materials[3].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // dialogue
+  model3dAppelAbysses.model.materials[4].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // son3d
+  model3dAppelAbysses.model.materials[5].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // effets sonores
+  model3dAppelAbysses.model.materials[6].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // voix
+  model3dAppelAbysses.model.materials[7].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // bruitage
+  model3dAppelAbysses.model.materials[8].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // musique
+  model3dAppelAbysses.model.materials[9].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // intro
+  model3dAppelAbysses.model.materials[10].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // isolement
+  model3dAppelAbysses.model.materials[11].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  
+};
+
+model3dAppelAbysses.addEventListener("load", () => {
+  HideAllAnnotationsAppelAbysses();
+
+  const changeColorAppelAbysses = async (event) => {
+    let materialAppelAbysses = model3dAppelAbysses.materialFromPoint(event.clientX, event.clientY);
+
+    // définir les 12 materiel
+    let material0AppelAbysses = model3dAppelAbysses.model.materials[0];
+    let material1AppelAbysses = model3dAppelAbysses.model.materials[1];
+    let material2AppelAbysses = model3dAppelAbysses.model.materials[2];
+    let material3AppelAbysses = model3dAppelAbysses.model.materials[3];
+    let material4AppelAbysses = model3dAppelAbysses.model.materials[4];
+    let material5AppelAbysses = model3dAppelAbysses.model.materials[5];
+    let material6AppelAbysses = model3dAppelAbysses.model.materials[6];
+    let material7AppelAbysses = model3dAppelAbysses.model.materials[7];
+    let material8AppelAbysses = model3dAppelAbysses.model.materials[8];
+    let material9AppelAbysses = model3dAppelAbysses.model.materials[9];
+    let material10AppelAbysses = model3dAppelAbysses.model.materials[10];
+    let material11AppelAbysses = model3dAppelAbysses.model.materials[11];
+    
+
+    // affichage et masquage des annotations
+    if(materialAppelAbysses === material1AppelAbysses) {
+      if (annotationNarrateur.classList.contains('no-display')) {
+        HideAllAnnotationsAppelAbysses();
+          annotationNarrateur.classList.remove('no-display');
+          model3dAppelAbysses.model.materials[1].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsAppelAbysses();
+      }
+    }
+
+    if(materialAppelAbysses === material0AppelAbysses) {
+      if (annotationPersonnages.classList.contains('no-display')) {
+        HideAllAnnotationsAppelAbysses();
+        annotationPersonnages.classList.remove('no-display');
+        model3dAppelAbysses.model.materials[0].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+    } 
+    else {
+      HideAllAnnotationsAppelAbysses();
+    }
+    }
+
+    if(materialAppelAbysses === material2AppelAbysses) {
+      if (annotationSilence.classList.contains('no-display')) {
+        HideAllAnnotationsAppelAbysses();
+          annotationSilence.classList.remove('no-display');
+          model3dAppelAbysses.model.materials[2].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsAppelAbysses();
+      }
+    }
+
+    if(materialAppelAbysses === material3AppelAbysses) {
+      if (annotationNarration.classList.contains('no-display')) {
+        HideAllAnnotationsAppelAbysses();
+          annotationNarration.classList.remove('no-display');
+          model3dAppelAbysses.model.materials[3].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsAppelAbysses();
+      }
+    }
+
+    if(materialAppelAbysses === material4AppelAbysses) {
+      if (annotationDialogue.classList.contains('no-display')) {
+        HideAllAnnotationsAppelAbysses();
+          annotationDialogue.classList.remove('no-display');
+          model3dAppelAbysses.model.materials[4].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsAppelAbysses();
+      }
+    }
+
+    if(materialAppelAbysses === material5AppelAbysses) {
+      if (annotationSon3d.classList.contains('no-display')) {
+        HideAllAnnotationsAppelAbysses();
+          annotationSon3d.classList.remove('no-display');
+          model3dAppelAbysses.model.materials[5].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsAppelAbysses();
+      }
+    }
+
+    if(materialAppelAbysses === material6AppelAbysses) {
+      if (annotationEffetsSonores.classList.contains('no-display')) {
+        HideAllAnnotationsAppelAbysses();
+          annotationEffetsSonores.classList.remove('no-display');
+          model3dAppelAbysses.model.materials[6].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsAppelAbysses();
+      }
+    }
+
+    if(materialAppelAbysses === material7AppelAbysses) {
+      if (annotationVoix.classList.contains('no-display')) {
+        HideAllAnnotationsAppelAbysses();
+          annotationVoix.classList.remove('no-display');
+          model3dAppelAbysses.model.materials[7].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsAppelAbysses();
+      }
+    }
+
+    if(materialAppelAbysses === material8AppelAbysses) {
+      if (annotationBruitage.classList.contains('no-display')) {
+        HideAllAnnotationsAppelAbysses();
+          annotationBruitage.classList.remove('no-display');
+          model3dAppelAbysses.model.materials[8].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsAppelAbysses();
+      }
+    }
+
+    if(materialAppelAbysses === material9AppelAbysses) {
+      if (annotationMusique.classList.contains('no-display')) {
+        HideAllAnnotationsAppelAbysses();
+          annotationMusique.classList.remove('no-display');
+          model3dAppelAbysses.model.materials[9].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsAppelAbysses();
+      }
+    }
+
+    if(materialAppelAbysses === material10AppelAbysses) {
+      if (annotationIntroduction.classList.contains('no-display')) {
+        HideAllAnnotationsAppelAbysses();
+          annotationIntroduction.classList.remove('no-display');
+          model3dAppelAbysses.model.materials[10].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsAppelAbysses();
+      }
+    }
+
+    if(materialAppelAbysses === material11AppelAbysses) {
+      if (annotationIsolement.classList.contains('no-display')) {
+        HideAllAnnotationsAppelAbysses();
+          annotationIsolement.classList.remove('no-display');
+          model3dAppelAbysses.model.materials[11].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsAppelAbysses();
+      }
+    }
+  }
+
+  model3dAppelAbysses.addEventListener("click", changeColorAppelAbysses);
+});
+
+// select ball - Rap & Roll
+
+
+function HideAllAnnotationsRapRoll(){
+  annotationIntroduction.classList.add("no-display");
+  annotationPersonnages.classList.add("no-display");
+  annotationSilence.classList.add("no-display");
+  annotationSon3d.classList.add("no-display");
+  annotationVoix.classList.add("no-display");
+  annotationNarrateur.classList.add("no-display");
+  annotationNarration.classList.add("no-display");
+  annotationDialogue.classList.add("no-display");
+  annotationEffetsSonores.classList.add("no-display");
+  annotationBruitage.classList.add("no-display");
+  annotationMusique.classList.add("no-display");
+  annotationIsolement.classList.add("no-display");
+
+
+  // personnages
+  model3dRapRoll.model.materials[0].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // narrateur
+  model3dRapRoll.model.materials[1].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // silence
+  model3dRapRoll.model.materials[2].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // narration
+  model3dRapRoll.model.materials[3].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // dialogue
+  model3dRapRoll.model.materials[4].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // son3d
+  model3dRapRoll.model.materials[5].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // effets sonores
+  model3dRapRoll.model.materials[6].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // voix
+  model3dRapRoll.model.materials[7].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // bruitage
+  model3dRapRoll.model.materials[8].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // musique
+  model3dRapRoll.model.materials[9].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // intro
+  model3dRapRoll.model.materials[10].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // isolement
+  model3dRapRoll.model.materials[11].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  
+};
+
+model3dRapRoll.addEventListener("load", () => {
+  HideAllAnnotationsRapRoll();
+
+  const changeColorRapRoll = async (event) => {
+    let materialRapRoll = model3dRapRoll.materialFromPoint(event.clientX, event.clientY);
+
+    // définir les 12 materiel
+    let material0RapRoll = model3dRapRoll.model.materials[0];
+    let material1RapRoll = model3dRapRoll.model.materials[1];
+    let material2RapRoll = model3dRapRoll.model.materials[2];
+    let material3RapRoll = model3dRapRoll.model.materials[3];
+    let material4RapRoll = model3dRapRoll.model.materials[4];
+    let material5RapRoll = model3dRapRoll.model.materials[5];
+    let material6RapRoll = model3dRapRoll.model.materials[6];
+    let material7RapRoll = model3dRapRoll.model.materials[7];
+    let material8RapRoll = model3dRapRoll.model.materials[8];
+    let material9RapRoll = model3dRapRoll.model.materials[9];
+    let material10RapRoll = model3dRapRoll.model.materials[10];
+    let material11RapRoll = model3dRapRoll.model.materials[11];
+    
+
+    // affichage et masquage des annotations
+    if(materialRapRoll === material1RapRoll) {
+      if (annotationNarrateur.classList.contains('no-display')) {
+        HideAllAnnotationsRapRoll();
+          annotationNarrateur.classList.remove('no-display');
+          model3dRapRoll.model.materials[1].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsRapRoll();
+      }
+    }
+
+    if(materialRapRoll === material0RapRoll) {
+      if (annotationPersonnages.classList.contains('no-display')) {
+        HideAllAnnotationsRapRoll();
+        annotationPersonnages.classList.remove('no-display');
+        model3dRapRoll.model.materials[0].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+    } 
+    else {
+      HideAllAnnotationsRapRoll();
+    }
+    }
+
+    if(materialRapRoll === material2RapRoll) {
+      if (annotationSilence.classList.contains('no-display')) {
+        HideAllAnnotationsRapRoll();
+          annotationSilence.classList.remove('no-display');
+          model3dRapRoll.model.materials[2].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsRapRoll();
+      }
+    }
+
+    if(materialRapRoll === material3RapRoll) {
+      if (annotationNarration.classList.contains('no-display')) {
+        HideAllAnnotationsRapRoll();
+          annotationNarration.classList.remove('no-display');
+          model3dRapRoll.model.materials[3].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsRapRoll();
+      }
+    }
+
+    if(materialRapRoll === material4RapRoll) {
+      if (annotationDialogue.classList.contains('no-display')) {
+        HideAllAnnotationsRapRoll();
+          annotationDialogue.classList.remove('no-display');
+          model3dRapRoll.model.materials[4].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsRapRoll();
+      }
+    }
+
+    if(materialRapRoll === material5RapRoll) {
+      if (annotationSon3d.classList.contains('no-display')) {
+        HideAllAnnotationsRapRoll();
+          annotationSon3d.classList.remove('no-display');
+          model3dRapRoll.model.materials[5].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsRapRoll();
+      }
+    }
+
+    if(materialRapRoll === material6RapRoll) {
+      if (annotationEffetsSonores.classList.contains('no-display')) {
+        HideAllAnnotationsRapRoll();
+          annotationEffetsSonores.classList.remove('no-display');
+          model3dRapRoll.model.materials[6].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsRapRoll();
+      }
+    }
+
+    if(materialRapRoll === material7RapRoll) {
+      if (annotationVoix.classList.contains('no-display')) {
+        HideAllAnnotationsRapRoll();
+          annotationVoix.classList.remove('no-display');
+          model3dRapRoll.model.materials[7].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsRapRoll();
+      }
+    }
+
+    if(materialRapRoll === material8RapRoll) {
+      if (annotationBruitage.classList.contains('no-display')) {
+        HideAllAnnotationsRapRoll();
+          annotationBruitage.classList.remove('no-display');
+          model3dRapRoll.model.materials[8].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsRapRoll();
+      }
+    }
+
+    if(materialRapRoll === material9RapRoll) {
+      if (annotationMusique.classList.contains('no-display')) {
+        HideAllAnnotationsRapRoll();
+          annotationMusique.classList.remove('no-display');
+          model3dRapRoll.model.materials[9].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsRapRoll();
+      }
+    }
+
+    if(materialRapRoll === material10RapRoll) {
+      if (annotationIntroduction.classList.contains('no-display')) {
+        HideAllAnnotationsRapRoll();
+          annotationIntroduction.classList.remove('no-display');
+          model3dRapRoll.model.materials[10].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsRapRoll();
+      }
+    }
+
+    if(materialRapRoll === material11RapRoll) {
+      if (annotationIsolement.classList.contains('no-display')) {
+        HideAllAnnotationsRapRoll();
+          annotationIsolement.classList.remove('no-display');
+          model3dRapRoll.model.materials[11].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsRapRoll();
+      }
+    }
+  }
+
+  model3dRapRoll.addEventListener("click", changeColorRapRoll);
+});
+
+// select ball - L'épopée temporelle
+
+
+function HideAllAnnotationsEpopeeTemporelle(){
+  annotationIntroduction.classList.add("no-display");
+  annotationPersonnages.classList.add("no-display");
+  annotationSilence.classList.add("no-display");
+  annotationSon3d.classList.add("no-display");
+  annotationVoix.classList.add("no-display");
+  annotationNarrateur.classList.add("no-display");
+  annotationNarration.classList.add("no-display");
+  annotationDialogue.classList.add("no-display");
+  annotationEffetsSonores.classList.add("no-display");
+  annotationBruitage.classList.add("no-display");
+  annotationMusique.classList.add("no-display");
+  annotationIsolement.classList.add("no-display");
+
+
+  // personnages
+  model3dEpopeeTemporelle.model.materials[0].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // narrateur
+  model3dEpopeeTemporelle.model.materials[1].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // silence
+  model3dEpopeeTemporelle.model.materials[2].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // narration
+  model3dEpopeeTemporelle.model.materials[3].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // dialogue
+  model3dEpopeeTemporelle.model.materials[4].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // son3d
+  model3dEpopeeTemporelle.model.materials[5].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // effets sonores
+  model3dEpopeeTemporelle.model.materials[6].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // voix
+  model3dEpopeeTemporelle.model.materials[7].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // bruitage
+  model3dEpopeeTemporelle.model.materials[8].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // musique
+  model3dEpopeeTemporelle.model.materials[9].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // intro
+  model3dEpopeeTemporelle.model.materials[10].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // isolement
+  model3dEpopeeTemporelle.model.materials[11].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  
+};
+
+model3dEpopeeTemporelle.addEventListener("load", () => {
+  HideAllAnnotationsEpopeeTemporelle();
+
+  const changeColorEpopeeTemporelle = async (event) => {
+    let materialEpopeeTemporelle = model3dEpopeeTemporelle.materialFromPoint(event.clientX, event.clientY);
+
+    // définir les 12 materiel
+    let material0EpopeeTemporelle = model3dEpopeeTemporelle.model.materials[0];
+    let material1EpopeeTemporelle = model3dEpopeeTemporelle.model.materials[1];
+    let material2EpopeeTemporelle = model3dEpopeeTemporelle.model.materials[2];
+    let material3EpopeeTemporelle = model3dEpopeeTemporelle.model.materials[3];
+    let material4EpopeeTemporelle = model3dEpopeeTemporelle.model.materials[4];
+    let material5EpopeeTemporelle = model3dEpopeeTemporelle.model.materials[5];
+    let material6EpopeeTemporelle = model3dEpopeeTemporelle.model.materials[6];
+    let material7EpopeeTemporelle = model3dEpopeeTemporelle.model.materials[7];
+    let material8EpopeeTemporelle = model3dEpopeeTemporelle.model.materials[8];
+    let material9EpopeeTemporelle = model3dEpopeeTemporelle.model.materials[9];
+    let material10EpopeeTemporelle = model3dEpopeeTemporelle.model.materials[10];
+    let material11EpopeeTemporelle = model3dEpopeeTemporelle.model.materials[11];
+    
+
+    // affichage et masquage des annotations
+    if(materialEpopeeTemporelle === material1EpopeeTemporelle) {
+      if (annotationNarrateur.classList.contains('no-display')) {
+        HideAllAnnotationsEpopeeTemporelle();
+          annotationNarrateur.classList.remove('no-display');
+          model3dEpopeeTemporelle.model.materials[1].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsEpopeeTemporelle();
+      }
+    }
+
+    if(materialEpopeeTemporelle === material0EpopeeTemporelle) {
+      if (annotationPersonnages.classList.contains('no-display')) {
+        HideAllAnnotationsEpopeeTemporelle();
+        annotationPersonnages.classList.remove('no-display');
+        model3dEpopeeTemporelle.model.materials[0].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+    } 
+    else {
+      HideAllAnnotationsEpopeeTemporelle();
+    }
+    }
+
+    if(materialEpopeeTemporelle === material2EpopeeTemporelle) {
+      if (annotationSilence.classList.contains('no-display')) {
+        HideAllAnnotationsEpopeeTemporelle();
+          annotationSilence.classList.remove('no-display');
+          model3dEpopeeTemporelle.model.materials[2].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsEpopeeTemporelle();
+      }
+    }
+
+    if(materialEpopeeTemporelle === material3EpopeeTemporelle) {
+      if (annotationNarration.classList.contains('no-display')) {
+        HideAllAnnotationsEpopeeTemporelle();
+          annotationNarration.classList.remove('no-display');
+          model3dEpopeeTemporelle.model.materials[3].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsEpopeeTemporelle();
+      }
+    }
+
+    if(materialEpopeeTemporelle === material4EpopeeTemporelle) {
+      if (annotationDialogue.classList.contains('no-display')) {
+        HideAllAnnotationsEpopeeTemporelle();
+          annotationDialogue.classList.remove('no-display');
+          model3dEpopeeTemporelle.model.materials[4].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsEpopeeTemporelle();
+      }
+    }
+
+    if(materialEpopeeTemporelle === material5EpopeeTemporelle) {
+      if (annotationSon3d.classList.contains('no-display')) {
+        HideAllAnnotationsEpopeeTemporelle();
+          annotationSon3d.classList.remove('no-display');
+          model3dEpopeeTemporelle.model.materials[5].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsEpopeeTemporelle();
+      }
+    }
+
+    if(materialEpopeeTemporelle === material6EpopeeTemporelle) {
+      if (annotationEffetsSonores.classList.contains('no-display')) {
+        HideAllAnnotationsEpopeeTemporelle();
+          annotationEffetsSonores.classList.remove('no-display');
+          model3dEpopeeTemporelle.model.materials[6].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsEpopeeTemporelle();
+      }
+    }
+
+    if(materialEpopeeTemporelle === material7EpopeeTemporelle) {
+      if (annotationVoix.classList.contains('no-display')) {
+        HideAllAnnotationsEpopeeTemporelle();
+          annotationVoix.classList.remove('no-display');
+          model3dEpopeeTemporelle.model.materials[7].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsEpopeeTemporelle();
+      }
+    }
+
+    if(materialEpopeeTemporelle === material8EpopeeTemporelle) {
+      if (annotationBruitage.classList.contains('no-display')) {
+        HideAllAnnotationsEpopeeTemporelle();
+          annotationBruitage.classList.remove('no-display');
+          model3dEpopeeTemporelle.model.materials[8].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsEpopeeTemporelle();
+      }
+    }
+
+    if(materialEpopeeTemporelle === material9EpopeeTemporelle) {
+      if (annotationMusique.classList.contains('no-display')) {
+        HideAllAnnotationsEpopeeTemporelle();
+          annotationMusique.classList.remove('no-display');
+          model3dEpopeeTemporelle.model.materials[9].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsEpopeeTemporelle();
+      }
+    }
+
+    if(materialEpopeeTemporelle === material10EpopeeTemporelle) {
+      if (annotationIntroduction.classList.contains('no-display')) {
+        HideAllAnnotationsEpopeeTemporelle();
+          annotationIntroduction.classList.remove('no-display');
+          model3dEpopeeTemporelle.model.materials[10].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsEpopeeTemporelle();
+      }
+    }
+
+    if(materialEpopeeTemporelle === material11EpopeeTemporelle) {
+      if (annotationIsolement.classList.contains('no-display')) {
+        HideAllAnnotationsEpopeeTemporelle();
+          annotationIsolement.classList.remove('no-display');
+          model3dEpopeeTemporelle.model.materials[11].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsEpopeeTemporelle();
+      }
+    }
+  }
+
+  model3dEpopeeTemporelle.addEventListener("click", changeColorEpopeeTemporelle);
+});
+
+// select ball - Godcast
+
+
+
+function HideAllAnnotationsLaMission(){
+  annotationIntroduction.classList.add("no-display");
+  annotationPersonnages.classList.add("no-display");
+  annotationSilence.classList.add("no-display");
+  annotationSon3d.classList.add("no-display");
+  annotationVoix.classList.add("no-display");
+  annotationNarrateur.classList.add("no-display");
+  annotationNarration.classList.add("no-display");
+  annotationDialogue.classList.add("no-display");
+  annotationEffetsSonores.classList.add("no-display");
+  annotationBruitage.classList.add("no-display");
+  annotationMusique.classList.add("no-display");
+  annotationIsolement.classList.add("no-display");
+
+
+  // personnages
+  model3dLaMission.model.materials[0].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // narrateur
+  model3dLaMission.model.materials[1].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // silence
+  model3dLaMission.model.materials[2].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // narration
+  model3dLaMission.model.materials[3].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // dialogue
+  model3dLaMission.model.materials[4].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // son3d
+  model3dLaMission.model.materials[5].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // effets sonores
+  model3dLaMission.model.materials[6].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // voix
+  model3dLaMission.model.materials[7].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // bruitage
+  model3dLaMission.model.materials[8].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // musique
+  model3dLaMission.model.materials[9].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // intro
+  model3dLaMission.model.materials[10].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // isolement
+  model3dLaMission.model.materials[11].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  
+};
+
+model3dLaMission.addEventListener("load", () => {
+  HideAllAnnotationsLaMission();
+
+  const changeColorLaMission = async (event) => {
+    let materialLaMission = model3dLaMission.materialFromPoint(event.clientX, event.clientY);
+
+    // définir les 12 materiel
+    let material0LaMission = model3dLaMission.model.materials[0];
+    let material1LaMission = model3dLaMission.model.materials[1];
+    let material2LaMission = model3dLaMission.model.materials[2];
+    let material3LaMission = model3dLaMission.model.materials[3];
+    let material4LaMission = model3dLaMission.model.materials[4];
+    let material5LaMission = model3dLaMission.model.materials[5];
+    let material6LaMission = model3dLaMission.model.materials[6];
+    let material7LaMission = model3dLaMission.model.materials[7];
+    let material8LaMission = model3dLaMission.model.materials[8];
+    let material9LaMission = model3dLaMission.model.materials[9];
+    let material10LaMission = model3dLaMission.model.materials[10];
+    let material11LaMission = model3dLaMission.model.materials[11];
+    
+
+    // affichage et masquage des annotations
+    if(materialLaMission === material1LaMission) {
+      if (annotationNarrateur.classList.contains('no-display')) {
+        HideAllAnnotationsLaMission();
+          annotationNarrateur.classList.remove('no-display');
+          model3dLaMission.model.materials[1].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsLaMission();
+      }
+    }
+
+    if(materialLaMission === material0LaMission) {
+      if (annotationPersonnages.classList.contains('no-display')) {
+        HideAllAnnotationsLaMission();
+        annotationPersonnages.classList.remove('no-display');
+        model3dLaMission.model.materials[0].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+    } 
+    else {
+      HideAllAnnotationsLaMission();
+    }
+    }
+
+    if(materialLaMission === material2LaMission) {
+      if (annotationSilence.classList.contains('no-display')) {
+        HideAllAnnotationsLaMission();
+          annotationSilence.classList.remove('no-display');
+          model3dLaMission.model.materials[2].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsLaMission();
+      }
+    }
+
+    if(materialLaMission === material3LaMission) {
+      if (annotationNarration.classList.contains('no-display')) {
+        HideAllAnnotationsLaMission();
+          annotationNarration.classList.remove('no-display');
+          model3dLaMission.model.materials[3].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsLaMission();
+      }
+    }
+
+    if(materialLaMission === material4LaMission) {
+      if (annotationDialogue.classList.contains('no-display')) {
+        HideAllAnnotationsLaMission();
+          annotationDialogue.classList.remove('no-display');
+          model3dLaMission.model.materials[4].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsLaMission();
+      }
+    }
+
+    if(materialLaMission === material5LaMission) {
+      if (annotationSon3d.classList.contains('no-display')) {
+        HideAllAnnotationsLaMission();
+          annotationSon3d.classList.remove('no-display');
+          model3dLaMission.model.materials[5].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsLaMission();
+      }
+    }
+
+    if(materialLaMission === material6LaMission) {
+      if (annotationEffetsSonores.classList.contains('no-display')) {
+        HideAllAnnotationsLaMission();
+          annotationEffetsSonores.classList.remove('no-display');
+          model3dLaMission.model.materials[6].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsLaMission();
+      }
+    }
+
+    if(materialLaMission === material7LaMission) {
+      if (annotationVoix.classList.contains('no-display')) {
+        HideAllAnnotationsLaMission();
+          annotationVoix.classList.remove('no-display');
+          model3dLaMission.model.materials[7].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsLaMission();
+      }
+    }
+
+    if(materialLaMission === material8LaMission) {
+      if (annotationBruitage.classList.contains('no-display')) {
+        HideAllAnnotationsLaMission();
+          annotationBruitage.classList.remove('no-display');
+          model3dLaMission.model.materials[8].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsLaMission();
+      }
+    }
+
+    if(materialLaMission === material9LaMission) {
+      if (annotationMusique.classList.contains('no-display')) {
+        HideAllAnnotationsLaMission();
+          annotationMusique.classList.remove('no-display');
+          model3dLaMission.model.materials[9].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsLaMission();
+      }
+    }
+
+    if(materialLaMission === material10LaMission) {
+      if (annotationIntroduction.classList.contains('no-display')) {
+        HideAllAnnotationsLaMission();
+          annotationIntroduction.classList.remove('no-display');
+          model3dLaMission.model.materials[10].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsLaMission();
+      }
+    }
+
+    if(materialLaMission === material11LaMission) {
+      if (annotationIsolement.classList.contains('no-display')) {
+        HideAllAnnotationsLaMission();
+          annotationIsolement.classList.remove('no-display');
+          model3dLaMission.model.materials[11].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsLaMission();
+      }
+    }
+  }
+
+  model3dLaMission.addEventListener("click", changeColorLaMission);
+});
+
+// select ball - Tu seras un homme papa
+
+
+function HideAllAnnotationsUnHomme(){
+  annotationIntroduction.classList.add("no-display");
+  annotationPersonnages.classList.add("no-display");
+  annotationSilence.classList.add("no-display");
+  annotationSon3d.classList.add("no-display");
+  annotationVoix.classList.add("no-display");
+  annotationNarrateur.classList.add("no-display");
+  annotationNarration.classList.add("no-display");
+  annotationDialogue.classList.add("no-display");
+  annotationEffetsSonores.classList.add("no-display");
+  annotationBruitage.classList.add("no-display");
+  annotationMusique.classList.add("no-display");
+  annotationIsolement.classList.add("no-display");
+
+
+  // personnages
+  model3dUnHomme.model.materials[0].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // narrateur
+  model3dUnHomme.model.materials[1].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // silence
+  model3dUnHomme.model.materials[2].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // narration
+  model3dUnHomme.model.materials[3].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // dialogue
+  model3dUnHomme.model.materials[4].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // son3d
+  model3dUnHomme.model.materials[5].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // effets sonores
+  model3dUnHomme.model.materials[6].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // voix
+  model3dUnHomme.model.materials[7].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // bruitage
+  model3dUnHomme.model.materials[8].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // musique
+  model3dUnHomme.model.materials[9].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // intro
+  model3dUnHomme.model.materials[10].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // isolement
+  model3dUnHomme.model.materials[11].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  
+};
+
+model3dUnHomme.addEventListener("load", () => {
+  HideAllAnnotationsUnHomme();
+
+  const changeColorUnHomme = async (event) => {
+    let materialUnHomme = model3dUnHomme.materialFromPoint(event.clientX, event.clientY);
+
+    // définir les 12 materiel
+    let material0UnHomme = model3dUnHomme.model.materials[0];
+    let material1UnHomme = model3dUnHomme.model.materials[1];
+    let material2UnHomme = model3dUnHomme.model.materials[2];
+    let material3UnHomme = model3dUnHomme.model.materials[3];
+    let material4UnHomme = model3dUnHomme.model.materials[4];
+    let material5UnHomme = model3dUnHomme.model.materials[5];
+    let material6UnHomme = model3dUnHomme.model.materials[6];
+    let material7UnHomme = model3dUnHomme.model.materials[7];
+    let material8UnHomme = model3dUnHomme.model.materials[8];
+    let material9UnHomme = model3dUnHomme.model.materials[9];
+    let material10UnHomme = model3dUnHomme.model.materials[10];
+    let material11UnHomme = model3dUnHomme.model.materials[11];
+    
+
+    // affichage et masquage des annotations
+    if(materialUnHomme === material1UnHomme) {
+      if (annotationNarrateur.classList.contains('no-display')) {
+        HideAllAnnotationsUnHomme();
+          annotationNarrateur.classList.remove('no-display');
+          model3dUnHomme.model.materials[1].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsUnHomme();
+      }
+    }
+
+    if(materialUnHomme === material0UnHomme) {
+      if (annotationPersonnages.classList.contains('no-display')) {
+        HideAllAnnotationsUnHomme();
+        annotationPersonnages.classList.remove('no-display');
+        model3dUnHomme.model.materials[0].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+    } 
+    else {
+      HideAllAnnotationsUnHomme();
+    }
+    }
+
+    if(materialUnHomme === material2UnHomme) {
+      if (annotationSilence.classList.contains('no-display')) {
+        HideAllAnnotationsUnHomme();
+          annotationSilence.classList.remove('no-display');
+          model3dUnHomme.model.materials[2].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsUnHomme();
+      }
+    }
+
+    if(materialUnHomme === material3UnHomme) {
+      if (annotationNarration.classList.contains('no-display')) {
+        HideAllAnnotationsUnHomme();
+          annotationNarration.classList.remove('no-display');
+          model3dUnHomme.model.materials[3].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsUnHomme();
+      }
+    }
+
+    if(materialUnHomme === material4UnHomme) {
+      if (annotationDialogue.classList.contains('no-display')) {
+        HideAllAnnotationsUnHomme();
+          annotationDialogue.classList.remove('no-display');
+          model3dUnHomme.model.materials[4].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsUnHomme();
+      }
+    }
+
+    if(materialUnHomme === material5UnHomme) {
+      if (annotationSon3d.classList.contains('no-display')) {
+        HideAllAnnotationsUnHomme();
+          annotationSon3d.classList.remove('no-display');
+          model3dUnHomme.model.materials[5].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsUnHomme();
+      }
+    }
+
+    if(materialUnHomme === material6UnHomme) {
+      if (annotationEffetsSonores.classList.contains('no-display')) {
+        HideAllAnnotationsUnHomme();
+          annotationEffetsSonores.classList.remove('no-display');
+          model3dUnHomme.model.materials[6].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsUnHomme();
+      }
+    }
+
+    if(materialUnHomme === material7UnHomme) {
+      if (annotationVoix.classList.contains('no-display')) {
+        HideAllAnnotationsUnHomme();
+          annotationVoix.classList.remove('no-display');
+          model3dUnHomme.model.materials[7].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsUnHomme();
+      }
+    }
+
+    if(materialUnHomme === material8UnHomme) {
+      if (annotationBruitage.classList.contains('no-display')) {
+        HideAllAnnotationsUnHomme();
+          annotationBruitage.classList.remove('no-display');
+          model3dUnHomme.model.materials[8].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsUnHomme();
+      }
+    }
+
+    if(materialUnHomme === material9UnHomme) {
+      if (annotationMusique.classList.contains('no-display')) {
+        HideAllAnnotationsUnHomme();
+          annotationMusique.classList.remove('no-display');
+          model3dUnHomme.model.materials[9].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsUnHomme();
+      }
+    }
+
+    if(materialUnHomme === material10UnHomme) {
+      if (annotationIntroduction.classList.contains('no-display')) {
+        HideAllAnnotationsUnHomme();
+          annotationIntroduction.classList.remove('no-display');
+          model3dUnHomme.model.materials[10].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsUnHomme();
+      }
+    }
+
+    if(materialUnHomme === material11UnHomme) {
+      if (annotationIsolement.classList.contains('no-display')) {
+        HideAllAnnotationsUnHomme();
+          annotationIsolement.classList.remove('no-display');
+          model3dUnHomme.model.materials[11].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsUnHomme();
+      }
+    }
+  }
+
+  model3dUnHomme.addEventListener("click", changeColorUnHomme);
+});
+
+
+// select ball - Spotify en mode 3D
+
+
+function HideAllAnnotationsSpotify(){
+  annotationIntroduction.classList.add("no-display");
+  annotationPersonnages.classList.add("no-display");
+  annotationSilence.classList.add("no-display");
+  annotationSon3d.classList.add("no-display");
+  annotationVoix.classList.add("no-display");
+  annotationNarrateur.classList.add("no-display");
+  annotationNarration.classList.add("no-display");
+  annotationDialogue.classList.add("no-display");
+  annotationEffetsSonores.classList.add("no-display");
+  annotationBruitage.classList.add("no-display");
+  annotationMusique.classList.add("no-display");
+  annotationIsolement.classList.add("no-display");
+
+
+  // personnages
+  model3dSpotify.model.materials[0].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // narrateur
+  model3dSpotify.model.materials[1].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // silence
+  model3dSpotify.model.materials[2].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // narration
+  model3dSpotify.model.materials[3].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // dialogue
+  model3dSpotify.model.materials[4].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // son3d
+  model3dSpotify.model.materials[5].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // effets sonores
+  model3dSpotify.model.materials[6].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // voix
+  model3dSpotify.model.materials[7].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // bruitage
+  model3dSpotify.model.materials[8].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // musique
+  model3dSpotify.model.materials[9].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // intro
+  model3dSpotify.model.materials[10].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  // isolement
+  model3dSpotify.model.materials[11].pbrMetallicRoughness.setBaseColorFactor([0.922, 0.73, 0.002])
+  
+};
+
+model3dSpotify.addEventListener("load", () => {
+  HideAllAnnotationsSpotify();
+
+  const changeColorSpotify = async (event) => {
+    let materialSpotify = model3dSpotify.materialFromPoint(event.clientX, event.clientY);
+
+    // définir les 12 materiel
+    let material0Spotify = model3dSpotify.model.materials[0];
+    let material1Spotify = model3dSpotify.model.materials[1];
+    let material2Spotify = model3dSpotify.model.materials[2];
+    let material3Spotify = model3dSpotify.model.materials[3];
+    let material4Spotify = model3dSpotify.model.materials[4];
+    let material5Spotify = model3dSpotify.model.materials[5];
+    let material6Spotify = model3dSpotify.model.materials[6];
+    let material7Spotify = model3dSpotify.model.materials[7];
+    let material8Spotify = model3dSpotify.model.materials[8];
+    let material9Spotify = model3dSpotify.model.materials[9];
+    let material10Spotify = model3dSpotify.model.materials[10];
+    let material11Spotify = model3dSpotify.model.materials[11];
+    
+
+    // affichage et masquage des annotations
+    if(materialSpotify === material1Spotify) {
+      if (annotationNarrateur.classList.contains('no-display')) {
+        HideAllAnnotationsSpotify();
+          annotationNarrateur.classList.remove('no-display');
+          model3dSpotify.model.materials[1].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsSpotify();
+      }
+    }
+
+    if(materialSpotify === material0Spotify) {
+      if (annotationPersonnages.classList.contains('no-display')) {
+        HideAllAnnotationsSpotify();
+        annotationPersonnages.classList.remove('no-display');
+        model3dSpotify.model.materials[0].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+    } 
+    else {
+      HideAllAnnotationsSpotify();
+    }
+    }
+
+    if(materialSpotify === material2Spotify) {
+      if (annotationSilence.classList.contains('no-display')) {
+        HideAllAnnotationsSpotify();
+          annotationSilence.classList.remove('no-display');
+          model3dSpotify.model.materials[2].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsSpotify();
+      }
+    }
+
+    if(materialSpotify === material3Spotify) {
+      if (annotationNarration.classList.contains('no-display')) {
+        HideAllAnnotationsSpotify();
+          annotationNarration.classList.remove('no-display');
+          model3dSpotify.model.materials[3].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsSpotify();
+      }
+    }
+
+    if(materialSpotify === material4Spotify) {
+      if (annotationDialogue.classList.contains('no-display')) {
+        HideAllAnnotationsSpotify();
+          annotationDialogue.classList.remove('no-display');
+          model3dSpotify.model.materials[4].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsSpotify();
+      }
+    }
+
+    if(materialSpotify === material5Spotify) {
+      if (annotationSon3d.classList.contains('no-display')) {
+        HideAllAnnotationsSpotify();
+          annotationSon3d.classList.remove('no-display');
+          model3dSpotify.model.materials[5].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsSpotify();
+      }
+    }
+
+    if(materialSpotify === material6Spotify) {
+      if (annotationEffetsSonores.classList.contains('no-display')) {
+        HideAllAnnotationsSpotify();
+          annotationEffetsSonores.classList.remove('no-display');
+          model3dSpotify.model.materials[6].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsSpotify();
+      }
+    }
+
+    if(materialSpotify === material7Spotify) {
+      if (annotationVoix.classList.contains('no-display')) {
+        HideAllAnnotationsSpotify();
+          annotationVoix.classList.remove('no-display');
+          model3dSpotify.model.materials[7].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsSpotify();
+      }
+    }
+
+    if(materialSpotify === material8Spotify) {
+      if (annotationBruitage.classList.contains('no-display')) {
+        HideAllAnnotationsSpotify();
+          annotationBruitage.classList.remove('no-display');
+          model3dSpotify.model.materials[8].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsSpotify();
+      }
+    }
+
+    if(materialSpotify === material9Spotify) {
+      if (annotationMusique.classList.contains('no-display')) {
+        HideAllAnnotationsSpotify();
+          annotationMusique.classList.remove('no-display');
+          model3dSpotify.model.materials[9].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsSpotify();
+      }
+    }
+
+    if(materialSpotify === material10Spotify) {
+      if (annotationIntroduction.classList.contains('no-display')) {
+        HideAllAnnotationsSpotify();
+          annotationIntroduction.classList.remove('no-display');
+          model3dSpotify.model.materials[10].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsSpotify();
+      }
+    }
+
+    if(materialSpotify === material11Spotify) {
+      if (annotationIsolement.classList.contains('no-display')) {
+        HideAllAnnotationsSpotify();
+          annotationIsolement.classList.remove('no-display');
+          model3dSpotify.model.materials[11].pbrMetallicRoughness.setBaseColorFactor([0.397, 0.317, 0.001])
+      } 
+      else {
+        HideAllAnnotationsSpotify();
+      }
+    }
+  }
+
+  model3dSpotify.addEventListener("click", changeColorSpotify);
+});
 
 
 
@@ -727,25 +2638,34 @@ function hideAllElements(){
     document.getElementById('model3dmentalfm').classList.add("no-display");
     dot3.classList.remove("selected");
     document.getElementById('derniereseance').classList.add("no-display");
+    document.getElementById('model3dderniereseance').classList.add("no-display");
     dot4.classList.remove("selected");
     document.getElementById('hellodemain').classList.add("no-display");
+    document.getElementById('model3dhellodemain').classList.add("no-display");
     dot5.classList.remove("selected");
     document.getElementById('lenuage').classList.add("no-display");
+    document.getElementById('model3dlenuage').classList.add("no-display");
     dot6.classList.remove("selected");
     document.getElementById('appelabysses').classList.add("no-display");
+    document.getElementById('model3dappelabysses').classList.add("no-display");
     dot7.classList.remove("selected");
     document.getElementById('raproll').classList.add("no-display");
+    document.getElementById('model3draproll').classList.add("no-display");
     dot8.classList.remove("selected");
     document.getElementById('epopeetemporelle').classList.add("no-display");
+    document.getElementById('model3depopeetemporelle').classList.add("no-display");
     dot9.classList.remove("selected");
     document.getElementById('popcorn').classList.add("no-display");
     document.getElementById('model3dpopcorns').classList.add("no-display");
     dot10.classList.remove("selected");
     document.getElementById('lamission').classList.add("no-display");
+    document.getElementById('model3dlamission').classList.add("no-display");
     dot11.classList.remove("selected");
     document.getElementById('unhommepapa').classList.add("no-display");
+    document.getElementById('model3dunhomme').classList.add("no-display");
     dot12.classList.remove("selected");
     document.getElementById('spotify3d').classList.add("no-display");
+    document.getElementById('model3dspotify').classList.add("no-display");
 }
 
 function showDot1(){
@@ -768,6 +2688,7 @@ function showDot3(){
     hideAllElements();
     dot3.classList.add("selected");
     document.getElementById('derniereseance').classList.remove("no-display");
+    document.getElementById('model3dderniereseance').classList.remove("no-display");
     document.location.hash='#3';
 }
 
@@ -775,6 +2696,7 @@ function showDot4(){
     hideAllElements();
     dot4.classList.add("selected");
     document.getElementById('hellodemain').classList.remove("no-display");
+    document.getElementById('model3dhellodemain').classList.remove("no-display");
     document.location.hash='#4';
 }
 
@@ -782,6 +2704,7 @@ function showDot5(){
     hideAllElements();
     dot5.classList.add("selected");
     document.getElementById('lenuage').classList.remove("no-display");
+    document.getElementById('model3dlenuage').classList.remove("no-display");
     document.location.hash='#5';
 }
 
@@ -789,6 +2712,7 @@ function showDot6(){
     hideAllElements();
     dot6.classList.add("selected");
     document.getElementById('appelabysses').classList.remove("no-display");
+    document.getElementById('model3dappelabysses').classList.remove("no-display");
     document.location.hash='#6';
 }
 
@@ -796,6 +2720,7 @@ function showDot7(){
     hideAllElements();
     dot7.classList.add("selected");
     document.getElementById('raproll').classList.remove("no-display");
+    document.getElementById('model3draproll').classList.remove("no-display");
     document.location.hash='#7';
 }
 
@@ -803,6 +2728,7 @@ function showDot8(){
     hideAllElements();
     dot8.classList.add("selected");
     document.getElementById('epopeetemporelle').classList.remove("no-display");
+    document.getElementById('model3depopeetemporelle').classList.remove("no-display");
     document.location.hash='#8';
 }
 
@@ -818,6 +2744,7 @@ function showDot10(){
     hideAllElements();
     dot10.classList.add("selected");
     document.getElementById('lamission').classList.remove("no-display");
+    document.getElementById('model3dlamission').classList.remove("no-display");
     document.location.hash='#10';
 }
 
@@ -825,6 +2752,7 @@ function showDot11(){
     hideAllElements();
     dot11.classList.add("selected");
     document.getElementById('unhommepapa').classList.remove("no-display");
+    document.getElementById('model3dunhomme').classList.remove("no-display");
     document.location.hash='#11';
 }
 
@@ -832,6 +2760,7 @@ function showDot12(){
     hideAllElements();
     dot12.classList.add("selected");
     document.getElementById('spotify3d').classList.remove("no-display");
+    document.getElementById('model3dspotify').classList.remove("no-display");
     document.location.hash='#12';
 }
 
@@ -849,26 +2778,58 @@ function hideAnnotation(){
     document.getElementById('annotation-musique').classList.add("no-display");
     document.getElementById('annotation-isolement').classList.add("no-display");
 
-    HideAllAnnotationsPopCorns();
-    HideAllAnnotationsGodcast();
-    HideAllAnnotationsMentalFM();
+    try {
+      HideAllAnnotationsGodcast();
+    } catch (error) {}
+
+    try {
+      HideAllAnnotationsMentalFM();
+    } catch (error) {}
+
+    try {
+      HideAllAnnotationsDerniereSeance();
+    } catch (error) {}
+
+    try {
+      HideAllAnnotationsHelloDemain();
+    } catch (error) {}
+
+    try {
+      HideAllAnnotationsPopCorns();
+    } catch (error) {}
+
+    try {
+      HideAllAnnotationsLeNuage();
+    } catch (error) {}
+
+    try {
+      HideAllAnnotationsAppelAbysses();
+    } catch (error) {}
+
+    try {
+      HideAllAnnotationsRapRoll();
+    } catch (error) {}
+
+    try {
+      HideAllAnnotationsLaMission();
+    } catch (error) {}
+
+    try {
+      HideAllAnnotationsSpotify();
+    } catch (error) {}
 
 }
 
-function defaultMaterial(){
-
-}
+// function defaultMaterial(){}
 
 dot1.addEventListener('click', function (){
     showDot1();
     hideAnnotation();
-    
 })
 
 dot2.addEventListener('click', function (){
     showDot2();
     hideAnnotation();
-    
 })
 
 dot3.addEventListener('click', function(){
