@@ -38,6 +38,12 @@ h3 {
   font-size: 18px;
 }
 
+h4 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+}
+
 .textbody-very-large {
   font-size: 24px;
   font-weight: 400;
@@ -79,6 +85,7 @@ a {
 .ref {
   font-size: 14px;
   vertical-align: super;
+  line-height: 12px;
 }
 
 /* RESPONSIVE TABLETTE PAYSAGE */
@@ -93,6 +100,10 @@ a {
 
   h3 {
     font-size: 24px;
+  }
+
+  h4 {
+    font-size: 22px;
   }
 
   .textbody-very-large {
@@ -954,10 +965,24 @@ h1.animate__animated.animate__fadeIn {
   margin: 0 10% 0 10%;
   padding-bottom: 43px;
 }
+.text-memoire h4 {
+  text-align: center;
+  padding-top: -30px;
+  padding-bottom: 51px;
+}
+.text-memoire .suivih4 {
+  padding-bottom: 10px;
+}
 
 .iframe-memoire iframe {
   width: 80% !important;
   margin: 0 10%;
+  margin-bottom: 40px;
+}
+
+.quote {
+  padding: 0 10%;
+  text-align: center;
 }
 
 @media screen and (min-width: 900px) {
@@ -970,6 +995,11 @@ h1.animate__animated.animate__fadeIn {
     transform: translate(-124px);
     transition: transform 0.5s ease-in-out;
   }
+
+  .iframe-memoire iframe {
+    width: 60% !important;
+    margin: 0 20% 40px 20%;
+  }
 }
 .page-fiction {
   display: flex;
@@ -979,6 +1009,11 @@ h1.animate__animated.animate__fadeIn {
 .page-fiction .text-fictions {
   max-width: 283px;
   margin: auto;
+}
+.page-fiction .text-fictions.text-3d {
+  padding: 20px 0;
+  font-style: italic;
+  font-weight: 200;
 }
 
 .ensemble-fiction {
@@ -993,7 +1028,25 @@ h1.animate__animated.animate__fadeIn {
   .page-fiction .text-fictions {
     margin: 0 10%;
     max-width: 508px;
+    margin-bottom: 20px;
+  }
+  .page-fiction .text-fictions.text-3d {
     margin-bottom: 100px;
+    font-size: 16px;
+    line-height: 21px;
+    font-style: italic;
+    padding: 0 0 0 20px;
+    position: relative;
+    font-weight: 300;
+  }
+  .page-fiction .text-fictions.text-3d:before {
+    content: "";
+    height: 100%;
+    width: 3px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #F6DE06;
   }
   .page-fiction h2 {
     text-align: left;

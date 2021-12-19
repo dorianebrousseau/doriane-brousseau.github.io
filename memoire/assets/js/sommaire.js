@@ -32,16 +32,6 @@ sommaireDesktop.addEventListener("click", function(){
 
 // Sommaire mobile qui se referme quand on clic un lien
 
-const som1 = document.getElementById('som1');
-const som2 = document.getElementById('som2');
-    const som21 = document.getElementById('som2-1');
-    const som22 = document.getElementById('som2-2');
-    const som23 = document.getElementById('som2-3');
-    const som24 = document.getElementById('som2-4');
-    const som25 = document.getElementById('som2-5');
-    const som26 = document.getElementById('som2-6');
-console.log(som1);
-
 function closeSommaire(){
     sommaireHeader.classList.remove("open");
     sommaireBody.classList.add("not-visible");
@@ -49,15 +39,16 @@ function closeSommaire(){
 }
     
 if (window.matchMedia('(max-width: 900px)').matches) {
-    som1.addEventListener("click", closeSommaire);
-    som2.addEventListener("click", closeSommaire);
-    som21.addEventListener("click", closeSommaire);
-    som22.addEventListener("click", closeSommaire);
-    som23.addEventListener("click", closeSommaire);
-    som24.addEventListener("click", closeSommaire);
-    som25.addEventListener("click", closeSommaire);
-    som26.addEventListener("click", closeSommaire);
+    const sommaireAll = document.querySelectorAll(".sommaire-lien")
+
+    sommaireAll.forEach(el => {
+        el.addEventListener('click', event => {
+            closeSommaire();
+        })
+    })
 } else {};
+
+
 
 
 // MENU MOBILE : enlever le scroll en fond quand ouvert
