@@ -600,6 +600,9 @@ input:checked + .toggle .soleil > path {
   padding-bottom: 24px;
   margin-bottom: 0px;
 }
+.sommaire-body h3:last-of-type {
+  padding-bottom: 50px;
+}
 .sommaire-body ul {
   margin: 0 0 0 15px;
 }
@@ -618,13 +621,17 @@ input:checked + .toggle .soleil > path {
   display: none;
 }
 
+#avant-propos {
+  margin-top: 100px;
+}
+
 .ancre {
   padding-top: 60px;
   margin-top: -60px;
 }
-.ancre#avant-propos {
-  padding-top: 40px;
-  margin-top: -40px;
+.ancre#son, .ancre#immersion, .ancre#conclusion, .ancre#bibliographie {
+  padding-top: 100px;
+  margin-top: -100px;
 }
 
 @media screen and (min-width: 900px) {
@@ -692,7 +699,7 @@ input:checked + .toggle .soleil > path {
     margin-bottom: 0px;
   }
   .sommaire-body h3:last-child {
-    padding-bottom: 24px;
+    padding-bottom: 50px;
     margin-bottom: 0px;
   }
   .sommaire-body ul {
@@ -985,6 +992,19 @@ h1.animate__animated.animate__fadeIn {
   text-align: center;
 }
 
+.biblio p {
+  text-align: left;
+}
+.biblio p a {
+  -webkit-text-decoration: solid underline #F6DE06;
+          text-decoration: solid underline #F6DE06;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  word-break: break-word;
+  position: relative;
+  z-index: -1;
+}
+
 @media screen and (min-width: 900px) {
   .text-memoire {
     margin-left: 327px;
@@ -1013,7 +1033,7 @@ h1.animate__animated.animate__fadeIn {
 .page-fiction .text-fictions.text-3d {
   padding: 20px 0;
   font-style: italic;
-  font-weight: 200;
+  font-weight: 300;
 }
 
 .ensemble-fiction {
