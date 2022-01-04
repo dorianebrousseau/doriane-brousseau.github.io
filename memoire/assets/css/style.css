@@ -1219,6 +1219,11 @@ h1.animate__animated.animate__fadeIn {
   width: 100%;
   margin-bottom: 20px;
 }
+.projet-page .projet-iframe-container em {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 @media screen and (min-width: 900px) {
   .projet-page {
@@ -1226,10 +1231,33 @@ h1.animate__animated.animate__fadeIn {
   }
   .projet-page .projet-text-container {
     width: 40%;
+    margin-bottom: 80px;
   }
   .projet-page .projet-iframe-container {
     width: 60%;
     margin: 0 0 0 0;
+  }
+}
+.projetpratique .cadre-annotation {
+  margin-top: 50px;
+}
+
+#model3dprojet {
+  width: 90%;
+  height: 80vh;
+  margin: auto;
+  margin-top: -50px;
+}
+
+@media screen and (min-width: 900px) {
+  .projetpratique .cadre-annotation {
+    margin-top: 50px;
+  }
+
+  #model3dprojet {
+    width: 90%;
+    margin: auto;
+    margin-top: -50px;
   }
 }
 body.animationactive {

@@ -9,6 +9,8 @@
     <script src="https://kit.fontawesome.com/165fe74b67.js" crossorigin="anonymous"></script>
     <script src="assets/js/scriptdarkmode.js"></script>
     <script src="assets/js/script.js" defer></script>
+    <script src="assets/js/projet3dscript.js" defer></script>
+    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
     <title>Mémoire | Doriane Brousseau</title>
     <link rel="icon" href="assets/img/favicon.ico" />
 </head>
@@ -72,30 +74,74 @@
         </div>
         </div>
 
-    <div>
-        <h2 class="titre-page">Mon Projet Pratique</h2>
-    </div>
+        <div class="croix-fiction">
+            <a href="projet.html">
+            <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="6.21399" y="8.07812" width="2.63636" height="20.2121" transform="rotate(-45 6.21399 8.07812)" fill="black"/>
+                <rect x="20.5061" y="6.21396" width="2.63636" height="20.2121" transform="rotate(45 20.5061 6.21396)" fill="black"/>
+                </svg>  
+            </a>          
+        </div>
 
-    <div class="projet-page">
-        <div class="projet-text-container">
-            <p class="textbody-large">Afin de mettre en pratique mes questionnements sur l’immersion et les fictions sonores, j’ai décidé de réaliser moi-même une fiction. Je vous présente donc : <em>2052</em>.</p>
-            <p class="textbody-large">Vous trouverez ci-après l’épisode pilote de ce que j’ai appelé une double fiction, c’est à dire une fiction dans lequel nous avons deux perspectives différentes sur la même histoire. L’épisode est composé de deux parties. Peu importe l’ordre d’écoute mais le lieu quant à lui importe, l’épisode pilote de la fiction est à écouter place Kléber, Strasbourg. 
-            </p>
-            <p class="textbody-large">Il s’agit ici plutôt d’une maquette de l’épisode en question, qui aura pour vocation d’être enregistré par des personnes maitrisant les techniques de voix à l’enregistrement. </p>
-        </div>
-        <div class="projet-iframe-container">
-            <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1189302955%3Fsecret_token%3Ds-nemjECuXxWa&color=%23000000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" name="" scrolling="no" scrolling="no" width="355" height="125"></iframe>
-            <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1189302964%3Fsecret_token%3Ds-h8U0wxAEQO4&color=%23000000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" name="" scrolling="no" scrolling="no" width="355" height="125"></iframe>
-            <div>
-                <em><p class="textbody autres-episodes button-big"><a href="projet-3d.html">Voir la représentation 3d de la fiction</a></p></em>
+        <div class="projetpratique">
+            <div class="cadre-annotation">
+                <div id="annotation-introduction" class="no-display">
+                    <p>Introduction</p>
+                </div>
+                <div id="annotation-personnages" class="no-display">
+                    <p>Personnages</p>
+                </div>
+                <div id="annotation-narrateur" class="no-display">
+                    <p>Narrateur</p>
+                </div>
+                <div id="annotation-silence" class="no-display">
+                    <p>Silence</p>
+                </div>
+                <div id="annotation-son3d" class="no-display">
+                    <p>Son Spatialisé</p>
+                </div>
+                <div id="annotation-effetssonores" class="no-display">
+                    <p>Effets sonores</p>
+                </div>
+                <div id="annotation-voix" class="no-display">
+                    <p>Voix</p>
+                </div>
+                <div id="annotation-bruitage" class="no-display">
+                    <p>Bruitage</p>
+                </div>
+                <div id="annotation-musique" class="no-display">
+                    <p>Musique</p>
+                </div>
+                <div id="annotation-dialogue" class="no-display">
+                    <p>Dialogue</p>
+                </div>
+                <div id="annotation-isolement" class="no-display">
+                    <p>Isolement</p>
+                </div>
+                <div id="annotation-narration" class="no-display">
+                    <p>Narration</p>
+                </div>
             </div>
+            <model-viewer id="model3dprojet" class="model3d" bounds="tight" src="assets/glb/Infographie-projet-pratique.glb" camera-controls shadow-intensity="0.5" autoplay environment-image="neutral" shadow-softness="1"  min-camera-orbit="auto 90deg 8m" min-field-of-view="30deg" max-camera-orbit="auto 110deg auto" camera-orbit="-538.8deg 100deg 8m" auto-rotate>
+                <div class="progress-bar hide" slot="progress-bar">
+                    <div class="update-bar"></div>
+                </div>
+            </model-viewer>  
+
         </div>
-    </div>
+
+    
 
     <footer>
         <p class="textreference">Doriane Brousseau <br>
             M2 Design Multimédia</p>
     </footer>
     
+    <!-- <script src="assets/js/3dscript.js"></script> -->
+    <!-- Loads <model-viewer> for browsers: -->
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+        <!-- <script src="assets/js/3dscript.js" defer></script> -->
+
 </body>
 </html>
